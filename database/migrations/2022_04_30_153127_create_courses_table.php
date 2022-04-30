@@ -19,6 +19,7 @@ return new class extends Migration
             $table->foreign('cat_id')->references('id')->on('cats');
             $table->unsignedBigInteger('trainer_id');
             $table->foreign('trainer_id')->references('id')->on('trainers');
+            $table->string('name');
             $table->string('small_desc');
             $table->text('desc');
             $table->integer('price');
