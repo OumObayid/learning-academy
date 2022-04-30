@@ -14,7 +14,16 @@ return new class extends Migration
     public function up()
     {
         Schema::create('courses', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->unsignedBigInteger('cat_id');
+            $table->foreign('cat_id')->reference('id')->on('cats');
+            $table->unsignedBigInteger('trainer_id');
+            $table->foreign('trainer_id')->reference('id')->on('trainers');
+            $table->string('small_desc');
+            $table->text('desc');
+            $table->integer('price');
+            $table->string('img');
+
             $table->timestamps();
         });
     }
