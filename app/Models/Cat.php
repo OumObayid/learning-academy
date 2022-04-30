@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Cat extends Model
 {
-    use HasFactory;
+    //use HasFactory;
+    protected $guarded = ['id'];
+    public function courses()
+    {
+        return $this->hasMany('App\Course');
+    }
 }
