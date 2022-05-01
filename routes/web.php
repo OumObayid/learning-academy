@@ -16,4 +16,4 @@ use App\Http\Controllers\Front\HomepageController;
 
 Route::get('/', [HomepageController::class, 'index'])->name('front.homepage');
 Route::get('/cat/{id}', [CourseController::class, 'cat'])->name('front.cat');
-Route::get('/cat/{id}/course/{c_id}', [CourseController::class, 'show'])->name('front.show');
+Route::get('/course/{c_id}', [CourseController::class, 'show'])->name('front.show');

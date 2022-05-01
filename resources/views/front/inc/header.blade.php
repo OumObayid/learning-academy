@@ -34,7 +34,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg navbar-light">
-                        <a class="navbar-brand" href="{{ Route('front.homepage') }}"> <img src="{{ asset('front/img') }}/logo.png" alt="logo"> </a>
+                        <a class="navbar-brand" href="{{ route('front.homepage') }}"> <img src="{{ asset('front/img') }}/logo.png" alt="logo"> </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -45,7 +45,7 @@
                             id="navbarSupportedContent">
                             <ul class="navbar-nav align-items-center">
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="{{ Route('front.homepage') }}">Home</a>
+                                    <a class="nav-link" href="{{ route('front.homepage') }}">Home</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="about.html">About</a>
@@ -61,8 +61,13 @@
                                         Courses
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="single-blog.html">Single blog</a>
-                                        <a class="dropdown-item" href="elements.html">Elements</a>
+                                       
+                                        @foreach ($cats as $cat )
+                                            <a class="dropdown-item" href="{{ route('front.cat', $cat->id) }}">{{ $cat->name }}</a>
+                                        @endforeach
+                                       
+
+
                                     </div>
                                 </li>
                                 <li class="nav-item">
