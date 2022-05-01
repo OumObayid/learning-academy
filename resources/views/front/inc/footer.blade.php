@@ -1,6 +1,6 @@
 
     <!-- footer part start-->
-    <footer class="footer-area">
+    <footer class="footer-area" style="padding: 30px 0px 20px;">
         <div class="container">
             <div class="row justify-content-between">
                 <div class="col-sm-6 col-md-4 col-xl-3">
