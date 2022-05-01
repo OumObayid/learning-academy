@@ -74,30 +74,25 @@
     <section class="member_counter">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-sm-6">
+                <div class="col-lg-4 col-sm-6">
                     <div class="single_member_counter">
-                        <span class="counter">1024</span>
-                        <h4>All Teachers</h4>
+                        <span class="counter">{{ $courses_count }}</span>
+                        <h4>Courses</h4>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6">
+                <div class="col-lg-4 col-sm-6">
                     <div class="single_member_counter">
-                        <span class="counter">960</span>
-                        <h4> All Students</h4>
+                        <span class="counter">{{ $trainers_count }}</span>
+                        <h4>Trainers</h4>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6">
+                <div class="col-lg-4 col-sm-6">
                     <div class="single_member_counter">
-                        <span class="counter">1020</span>
-                        <h4>Online Students</h4>
+                        <span class="counter">{{ $students_count }}</span>
+                        <h4>Students</h4>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single_member_counter">
-                        <span class="counter">820</span>
-                        <h4>Ofline Students</h4>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
@@ -147,7 +142,7 @@
 
 
     <!--::testimonial_part start::-->
-    <section class="testimonial_part">
+    <section class="testimonial_part mt-5">
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-xl-5">
@@ -160,102 +155,40 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="textimonial_iner owl-carousel">
-                        <div class="testimonial_slider">
-                            <div class="row">
-                                <div class="col-lg-8 col-xl-4 col-sm-8 align-self-center">
-                                    <div class="testimonial_slider_text">
-                                        <p>Behold place was a multiply creeping creature his domin to thiren open void
-                                            hath herb divided divide creepeth living shall i call beginning
-                                            third sea itself set</p>
-                                        <h4>Michel Hashale</h4>
-                                        <h5> Sr. Web designer</h5>
+                        @foreach ($tests as $t)
+                            <div class="testimonial_slider">
+                                <div class="row">
+                                    <div class="col-lg-8 col-xl-4 col-sm-8 align-self-center">
+                                        <div class="testimonial_slider_text">
+                                            <p>Behold place was a multiply creeping creature his domin to thiren open void
+                                                hath herb divided divide creepeth living shall i call beginning
+                                                third sea itself set</p>
+                                            <h4>Michel Hashale</h4>
+                                            <h5> Sr. Web designer</h5>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-lg-4 col-xl-2 col-sm-4">
-                                    <div class="testimonial_slider_img">
-                                        <img src="{{ asset('front/img') }}/testimonial_img_1.png" alt="#">
+                                    <div class="col-lg-4 col-xl-2 col-sm-4">
+                                        <div class="testimonial_slider_img">
+                                            <img src="{{ asset('front/img') }}/testimonial_img_1.png" alt="#">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-xl-4 d-none d-xl-block">
-                                    <div class="testimonial_slider_text">
-                                        <p>Behold place was a multiply creeping creature his domin to thiren open void
-                                            hath herb divided divide creepeth living shall i call beginning
-                                            third sea itself set</p>
-                                        <h4>Michel Hashale</h4>
-                                        <h5> Sr. Web designer</h5>
+                                    <div class="col-xl-4 d-none d-xl-block">
+                                        <div class="testimonial_slider_text">
+                                            <p>Behold place was a multiply creeping creature his domin to thiren open void
+                                                hath herb divided divide creepeth living shall i call beginning
+                                                third sea itself set</p>
+                                            <h4>Michel Hashale</h4>
+                                            <h5> Sr. Web designer</h5>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-xl-2 d-none d-xl-block">
-                                    <div class="testimonial_slider_img">
-                                        <img src="{{ asset('front/img') }}/testimonial_img_1.png" alt="#">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial_slider">
-                            <div class="row">
-                                <div class="col-lg-8 col-xl-4 col-sm-8 align-self-center">
-                                    <div class="testimonial_slider_text">
-                                        <p>Behold place was a multiply creeping creature his domin to thiren open void
-                                            hath herb divided divide creepeth living shall i call beginning
-                                            third sea itself set</p>
-                                        <h4>Michel Hashale</h4>
-                                        <h5> Sr. Web designer</h5>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-xl-2 col-sm-4">
-                                    <div class="testimonial_slider_img">
-                                        <img src="{{ asset('front/img') }}/testimonial_img_2.png" alt="#">
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 d-none d-xl-block">
-                                    <div class="testimonial_slider_text">
-                                        <p>Behold place was a multiply creeping creature his domin to thiren open void
-                                            hath herb divided divide creepeth living shall i call beginning
-                                            third sea itself set</p>
-                                        <h4>Michel Hashale</h4>
-                                        <h5> Sr. Web designer</h5>
-                                    </div>
-                                </div>
-                                <div class="col-xl-2 d-none d-xl-block">
-                                    <div class="testimonial_slider_img">
-                                        <img src="{{ asset('front/img') }}/testimonial_img_1.png" alt="#">
+                                    <div class="col-xl-2 d-none d-xl-block">
+                                        <div class="testimonial_slider_img">
+                                            <img src="{{ asset('front/img') }}/testimonial_img_1.png" alt="#">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="testimonial_slider">
-                            <div class="row">
-                                <div class="col-lg-8 col-xl-4 col-sm-8 align-self-center">
-                                    <div class="testimonial_slider_text">
-                                        <p>Behold place was a multiply creeping creature his domin to thiren open void
-                                            hath herb divided divide creepeth living shall i call beginning
-                                            third sea itself set</p>
-                                        <h4>Michel Hashale</h4>
-                                        <h5> Sr. Web designer</h5>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-xl-2 col-sm-4">
-                                    <div class="testimonial_slider_img">
-                                        <img src="{{ asset('front/img') }}/testimonial_img_3.png" alt="#">
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 d-none d-xl-block">
-                                    <div class="testimonial_slider_text">
-                                        <p>Behold place was a multiply creeping creature his domin to thiren open void
-                                            hath herb divided divide creepeth living shall i call beginning
-                                            third sea itself set</p>
-                                        <h4>Michel Hashale</h4>
-                                        <h5> Sr. Web designer</h5>
-                                    </div>
-                                </div>
-                                <div class="col-xl-2 d-none d-xl-block">
-                                    <div class="testimonial_slider_img">
-                                        <img src="{{ asset('front/img') }}/testimonial_img_1.png" alt="#">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
 

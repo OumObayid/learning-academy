@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Front;
 use App\Models\Course;
+use App\Models\Student;
+use App\Models\Trainer;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -13,6 +15,10 @@ class HomepageController extends Controller
         ->orderBy('id', 'desc')
         ->take('3')
         ->get();
+        $data['courses_count'] = Course::count();
+        $data['trainers_count'] = Trainer::count();
+        $data['students_count'] = Student::count();
+        $data['tests'] = Test::select('name','spec','desc','img');
         return view('front.index')->with($data);
     }
 }
