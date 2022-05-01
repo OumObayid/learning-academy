@@ -120,7 +120,7 @@
                         <div class="single_special_cource">
                             <img src="{{ asset('uploads/courses/'. $c->img) }}" class="special_img" alt="">
                             <div class="special_cource_text">
-                                <a href="course-details.html" class="btn_4">{{$c->cat->name}}</a>
+                                <a href="course-details.html" style="width: 50%; text-align: center;" class="btn_4">{{$c->cat->name}}</a>
                                 <h4>${{$c->price}}</h4>
                                 <a href="course-details.html"><h3>{{$c->name}}</h3></a>
                                 <p>{{$c->small_desc}}</p>
@@ -142,11 +142,11 @@
             </div>
         </div>
     </section>
-    <!--::blog_part end::-->
+    <!--::review_part end::-->
 
 
 
-    <!--::review_part start::-->
+    <!--::testimonial_part start::-->
     <section class="testimonial_part">
         <div class="container-fluid">
             <div class="row justify-content-center">
@@ -262,7 +262,7 @@
             </div>
         </div>
     </section>
-    <!--::review_part end::-->
+    <!--::testimonial_part end::-->
 
 
 
