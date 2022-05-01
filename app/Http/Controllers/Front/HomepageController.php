@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Front;
+use App\Models\Test;
 use App\Models\Course;
 use App\Models\Student;
 use App\Models\Trainer;

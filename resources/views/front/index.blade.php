@@ -160,30 +160,16 @@
                                 <div class="row">
                                     <div class="col-lg-8 col-xl-4 col-sm-8 align-self-center">
                                         <div class="testimonial_slider_text">
-                                            <p>Behold place was a multiply creeping creature his domin to thiren open void
-                                                hath herb divided divide creepeth living shall i call beginning
-                                                third sea itself set</p>
-                                            <h4>Michel Hashale</h4>
-                                            <h5> Sr. Web designer</h5>
+                                            <p>{{ $t->desc }}</p>
+                                            <h4>{{ $t->name }}</h4>
+                                            @if ( $t->spec !=null)
+                                                <h5>{{ $t->spec }}</h5>
+                                            @endif
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-xl-2 col-sm-4">
                                         <div class="testimonial_slider_img">
-                                            <img src="{{ asset('front/img') }}/testimonial_img_1.png" alt="#">
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-4 d-none d-xl-block">
-                                        <div class="testimonial_slider_text">
-                                            <p>Behold place was a multiply creeping creature his domin to thiren open void
-                                                hath herb divided divide creepeth living shall i call beginning
-                                                third sea itself set</p>
-                                            <h4>Michel Hashale</h4>
-                                            <h5> Sr. Web designer</h5>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-2 d-none d-xl-block">
-                                        <div class="testimonial_slider_img">
-                                            <img src="{{ asset('front/img') }}/testimonial_img_1.png" alt="#">
+                                            <img src="{{ asset('uploads/tests/'.$t->img ) }}" alt="#">
                                         </div>
                                     </div>
                                 </div>
