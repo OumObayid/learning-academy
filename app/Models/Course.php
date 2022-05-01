@@ -11,14 +11,14 @@ class Course extends Model
       protected $guarded = ['id'];
       public function cat()
       {
-          return $this->belongsTo('App\Cat');
+          return $this->belongsTo('App\Models\Cat');
       }
       public function trainer()
       {
-          return $this->belongsTo('App\Trainer');
+          return $this->belongsTo('App\Models\Trainer');
       }
       public function student()
       {
-          return $this->belongsToMany('App\Student');
+          return $this->belongsToMany('App\Models\Student');
       }
 }
