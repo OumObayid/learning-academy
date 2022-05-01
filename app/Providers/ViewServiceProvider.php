@@ -13,9 +13,9 @@ class ViewServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        // view()->composer('front.inc.header', function($view) {
-        //     $view->with('cats',Cat::select('id','name')->get());
-        // });
+        view()->composer('front.inc.header', function($view) {
+            $view->with('cats',Cat::select('id','name')->get());
+        });
         // View::composer('front.inc.header',function($view){
         //     $view->with('cats',Cat::select('id','name')->get());
         // });
@@ -28,8 +28,6 @@ class ViewServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        View::composer('front.inc.header', function($view){
-            $view->with('cats',Cat::select('id','name')->get()); 
-        }) ; 
+        //
     }
 }

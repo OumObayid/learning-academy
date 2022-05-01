@@ -29,7 +29,12 @@
 
 <body>
     <!--::header part start::-->
-    <header class="main_menu home_menu">
+    <header class="main_menu 
+    @if (Route::currentRouteName() == 'front.homepage')
+         home_menu
+    @else
+         single_page_menu
+    @endif ">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-12">
@@ -46,16 +51,7 @@
                             <ul class="navbar-nav align-items-center">
                                 <li class="nav-item active">
                                     <a class="nav-link" href="{{ route('front.homepage') }}">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="about.html">About</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="cource.html">Courses</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="blog.html">Blog</a>
-                                </li>
+                                </li> 
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Courses
