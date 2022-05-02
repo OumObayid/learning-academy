@@ -67,7 +67,7 @@
                                     </div>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Contact</a>
+                                    <a class="nav-link" href="{{ route('front.contact') }}">Contact</a>
                                 </li>
                             </ul>
                         </div>
