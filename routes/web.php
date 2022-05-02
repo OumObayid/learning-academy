@@ -21,3 +21,4 @@ Route::get('/cat/{id}', [CourseController::class, 'cat'])->name('front.cat');
 Route::get('/course/{c_id}', [CourseController::class, 'show'])->name('front.show');
 Route::get('/contact', [ContactController::class, 'index'])->name('front.contact');
 Route::post('/message/newsletter', [MessageController::class, 'newsletter'])->name('front.message.newsletter');
+Route::post('/message/contact', [MessageController::class, 'contact'])->name('front.message.contact');
