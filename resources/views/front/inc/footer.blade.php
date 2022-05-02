@@ -16,14 +16,16 @@
                         <h4>Newsletter</h4>
                         <p>Stay updated with our latest trends Seed heaven so said place winged over given forth fruit.
                         </p>
-                        <form action="#">
+                        @include('front.inc.errors')
+                        <form id="newsletter" action="{{ route('front.message.newsletter') }}" method="POST">
+                           @csrf
                             <div class="form-group">
                                 <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder='Enter email address'
+                                    <input type="email" name="email" class="form-control" placeholder='Enter email address'
                                         onfocus="this.placeholder = ''"
                                         onblur="this.placeholder = 'Enter email address'">
                                     <div class="input-group-append">
-                                        <button class="btn btn_1" type="button"><i class="ti-angle-right"></i></button>
+                                        <button class="btn btn_1" type="submit"><i class="ti-angle-right"></i></button>
                                     </div>
                                 </div>
                             </div>

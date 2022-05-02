@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class NewsLetter extends Model
-{
+{ 
+    protected $fillable = ['email'];
+
     use HasFactory;
 }
