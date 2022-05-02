@@ -5,6 +5,7 @@ use App\Models\Test;
 use App\Models\Course;
 use App\Models\Student;
 use App\Models\Trainer;
+use App\Models\SiteContent;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -12,6 +13,7 @@ class HomepageController extends Controller
 {
     public function index()
     {
+        $data['banner'] = SiteContent:: select('content')->where('name','banner')->first();
         $data['courses'] = Course:: select('id', 'name', 'small_desc', 'cat_id', 'trainer_id', 'img', 'price')
         ->orderBy('id', 'desc')
         ->take('3')
