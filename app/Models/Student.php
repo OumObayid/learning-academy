@@ -8,7 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Student extends Model
 {
       //use HasFactory;
-      protected $guarded = ['id'];
+      use HasFactory;
+
       public function courses()
       {
           return $this->belongsToMany('App\Course');

@@ -19,5 +19,41 @@ class CourseStudentSeeder extends Seeder
                'course_id' =>1,
                'student_id' =>1,
         ]);
+        DB::table('course_student')->insert([
+            'course_id' =>1,
+            'student_id' =>2,
+     ]);
+     DB::table('course_student')->insert([
+        'course_id' =>1,
+        'student_id' =>3,
+ ]);
+ DB::table('course_student')->insert([
+    'course_id' =>1,
+    'student_id' =>4,
+]);
+DB::table('course_student')->insert([
+    'course_id' =>2,
+    'student_id' =>5,
+]);
+DB::table('course_student')->insert([
+    'course_id' =>3,
+    'student_id' =>6,
+]);
+DB::table('course_student')->insert([
+    'course_id' =>2,
+    'student_id' =>1,
+]);
+DB::table('course_student')->insert([
+    'course_id' =>3,
+    'student_id' =>3,
+]);
+DB::table('course_student')->insert([
+    'course_id' =>4,
+    'student_id' =>4,
+]);
+DB::table('course_student')->insert([
+    'course_id' =>5,
+    'student_id' =>5,
+]);
     }
 }

@@ -14,7 +14,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-         \App\Models\Student::factory(10)->create();
+         this->call([
+            CatSeeder::class,
+            TrainerSeeder::class,
+            StudentSeeder::class,
+            CourseSeeder::class,
+            CourseStudentSeeder::class,
+           
+
+         ]);
 
     }
 }

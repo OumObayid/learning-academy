@@ -17,7 +17,7 @@ return new class extends Migration
             $table->bigIncrements('id');
             $table->string('username');
             $table->string('email');
-            $table->string('passeword');
+            $table->string('password');
 
             $table->timestamps();
         });
