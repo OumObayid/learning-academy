@@ -22,3 +22,4 @@ Route::get('/course/{c_id}', [CourseController::class, 'show'])->name('front.sho
 Route::get('/contact', [ContactController::class, 'index'])->name('front.contact');
 Route::post('/message/newsletter', [MessageController::class, 'newsletter'])->name('front.message.newsletter');
 Route::post('/message/contact', [MessageController::class, 'contact'])->name('front.message.contact');
+Route::post('/message/enroll', [MessageController::class, 'enroll'])->name('front.message.enroll');
