@@ -40,7 +40,7 @@
                     <div class="single-footer-widget footer_2">
                         <h4>Contact us</h4>
                         <div class="contact_info">
-                            <p><span> Address :</span> {{ $sett->adresse }} </p>
+                            <p><span> Address :</span> {{ $sett->adresse .', ' . $sett->city }}  </p>
                             <p><span> Phone :</span>{{ $sett->phone }}</p>
                             <p><span> Email : </span> {{ $sett->email }} </p>
                         </div>
