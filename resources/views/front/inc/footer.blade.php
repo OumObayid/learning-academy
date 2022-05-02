@@ -5,7 +5,7 @@
             <div class="row justify-content-between">
                 <div class="col-sm-6 col-md-4 col-xl-3">
                     <div class="single-footer-widget footer_1">
-                        <a href="{{ route('front.homepage') }}"> <img src="{{ asset('front/img') }}/logo.png" alt=""> </a>
+                        <a  href="{{ route('front.homepage') }}"> <img src="{{ asset('uploads/setting/'.$sett->logo) }}" alt="logo"> </a>
                         <p>But when shot real her. Chamber her one visite removal six
                             sending himself boys scot exquisite existend an </p>
                         <p>But when shot real her hamber her </p>
@@ -29,10 +29,10 @@
                             </div>
                         </form>
                         <div class="social_icon">
-                            <a href="#"> <i class="ti-facebook"></i> </a>
-                            <a href="#"> <i class="ti-twitter-alt"></i> </a>
-                            <a href="#"> <i class="ti-instagram"></i> </a>
-                            <a href="#"> <i class="ti-skype"></i> </a>
+                            <a href="{{ $sett->fb }}"> <i class="ti-facebook"></i> </a>
+                            <a href="{{ $sett->twiter }}"> <i class="ti-twitter-alt"></i> </a>
+                            <a href="{{ $sett->insta }}"> <i class="ti-instagram"></i> </a>
+                            
                         </div>
                     </div>
                 </div>
@@ -40,9 +40,9 @@
                     <div class="single-footer-widget footer_2">
                         <h4>Contact us</h4>
                         <div class="contact_info">
-                            <p><span> Address :</span> Hath of it fly signs bear be one blessed after </p>
-                            <p><span> Phone :</span> +2 36 265 (8060)</p>
-                            <p><span> Email : </span>info@colorlib.com </p>
+                            <p><span> Address :</span> {{ $sett->adresse }} </p>
+                            <p><span> Phone :</span>{{ $sett->phone }}</p>
+                            <p><span> Email : </span> {{ $sett->email }} </p>
                         </div>
                     </div>
                 </div>
@@ -56,7 +56,7 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <p class="footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Edited <i class="ti-heart" aria-hidden="true"></i> by <a href="{{ $sett->site }}" target="_blank">Learning Academy</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                             </div>
                         </div>

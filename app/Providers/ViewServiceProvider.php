@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 use App\Models\Cat;
+use App\Models\Setting;
 use Illuminate\Support\ServiceProvider;
 
 class ViewServiceProvider extends ServiceProvider
@@ -15,10 +16,12 @@ class ViewServiceProvider extends ServiceProvider
     {
         view()->composer('front.inc.header', function($view) {
             $view->with('cats',Cat::select('id','name')->get());
+            $view->with('sett',Setting::select('logo','favicon')->first());
         });
-        // View::composer('front.inc.header',function($view){
-        //     $view->with('cats',Cat::select('id','name')->get());
-        // });
+        view()->composer('front.inc.footer', function($view) {
+            $view->with('sett',Setting::first());
+        });
+      
     }
 
     /**

@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('phone');
             $table->string('work_hours');
             $table->string('email');
-            $table->text('map');
+            $table->text('site');
             $table->string('fb');
             $table->string('twiter');
             $table->string('insta');
