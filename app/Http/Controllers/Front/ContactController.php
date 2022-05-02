@@ -2,14 +2,15 @@
 
 namespace App\Http\Controllers\Front;
 
-use App\Http\Controllers\Controller;
+use App\Models\Setting;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class ContactController extends Controller
 {
     public function index()
     {
-        $data['setting'] = Course:: select('id', 'name', 'small_desc', 'cat_id', 'trainer_id', 'img', 'price')
+        $data['contact'] = Setting:: select('name', 'city','adresse', 'phone', 'work_hours', 'email','fb','twiter', 'insta')
         ->first(); 
         return view('front.contact')->with($data);
 
