@@ -18,31 +18,31 @@ class TestSeeder extends Seeder
         Test::create([
             'name' => 'Rachid Foulani',            
             'spec' => 'Frontend',            
-            'desc' => 'Samir Safouan',  
+            'desc' => "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", 
             'img' => '1.png',          
          ]);
          Test::create([
-            'spec' => 'Kenza Mouran',            
+            'name' => 'Kenza Mouran',            
             'spec' => 'Backend',            
-            'desc' => 'Programming',  
+            'desc' => "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", 
             'img' => '3.png',          
          ]);
          Test::create([
-            'desc' => 'Samir Safouan',  
+            'name' => 'Samir Safouan',  
             'spec' => 'Fullstack',            
-            'desc' => 'Programming',  
+            'desc' => "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s", 
             'img' => '2.png',          
          ]);
          Test::create([
-            'desc' => 'Mina Sandi',  
+            'name' => 'Mina Sandi',  
             'spec' => 'Ui designer',            
-            'desc' => 'Programming',  
+            'desc' => "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",             
             'img' => '3.png',          
          ]);
          Test::create([
-            'desc' => 'Omar Ibrahimi',  
+            'name' => 'Omar Ibrahimi',  
             'spec' => 'Webmaster',            
-            'desc' => 'Programming',  
+            'desc' => "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",  
             'img' => '1.png',          
          ]);
     }

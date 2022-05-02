@@ -4,11 +4,11 @@
   var review = $('.player_info_item');
   if (review.length) {
     review.owlCarousel({
-      items: 1,
+      items: 2,
       loop: true,
       dots: false,
       autoplay: true,
-      margin: 40,
+      margin: 5,
       autoplayHoverPause: true,
       autoplayTimeout: 5000,
       nav: true,
@@ -44,7 +44,7 @@
   var review = $('.textimonial_iner');
   if (review.length) {
     review.owlCarousel({
-      items: 1,
+      items: 2,
       loop: true,
       dots: true,
       autoplay: true,

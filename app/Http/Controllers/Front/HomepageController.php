@@ -19,7 +19,7 @@ class HomepageController extends Controller
         $data['courses_count'] = Course::count();
         $data['trainers_count'] = Trainer::count();
         $data['students_count'] = Student::count();
-        $data['tests'] = Test::select('name','spec','desc','img');
+        $data['tests'] = Test::select('name','spec','desc','img')->get();
         return view('front.index')->with($data);
     }
 }

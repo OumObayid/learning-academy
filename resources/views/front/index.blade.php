@@ -153,11 +153,11 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="textimonial_iner owl-carousel">
+                    <div class="textimonial_iner owl-carousel "  >
                         @foreach ($tests as $t)
-                            <div class="testimonial_slider">
+                            <div class="testimonial_slider" >
                                 <div class="row">
-                                    <div class="col-lg-8 col-xl-4 col-sm-8 align-self-center">
+                                    <div class="col-lg-8 col-xl-8 col-sm-8 align-self-center">
                                         <div class="testimonial_slider_text">
                                             <p>{{ $t->desc }}</p>
                                             <h4>{{ $t->name }}</h4>
@@ -166,7 +166,7 @@
                                             @endif
                                         </div>
                                     </div>
-                                    <div class="col-lg-4 col-xl-2 col-sm-4">
+                                    <div class="col-lg-4 col-xl-4 col-sm-4">
                                         <div class="testimonial_slider_img">
                                             <img src="{{ asset('uploads/tests/'.$t->img ) }}" alt="#">
                                         </div>
