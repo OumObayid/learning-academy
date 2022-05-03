@@ -7,13 +7,13 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 
-class AutController extends Controller
+class AuthController extends Controller
 {
-    public function login() 
+    public function login()
     {
         return view('admin.auth.login');
     }
-    public function doLogin(Request $request) 
+    public function doLogin(Request $request)
     {
         $data = $request->validate([
           'email' => 'required|email|max:191',

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\AutController;
+use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Front\CourseController;
 use App\Http\Controllers\Front\ContactController;
@@ -26,12 +26,12 @@ Route::namespace('Front')->group(function(){
     Route::post('/message/newsletter', [MessageController::class, 'newsletter'])->name('front.message.newsletter');
     Route::post('/message/contact', [MessageController::class, 'contact'])->name('front.message.contact');
     Route::post('/message/enroll', [MessageController::class, 'enroll'])->name('front.message.enroll');
-    
+
 });
 
 Route::namespace('Front')->group(function(){
-    Route::get('/dashboard/login', [AutController::class, 'login'])->name('admin.login');
-    Route::post('/dashboard/do-login', [AutController::class, 'doLogin'])->name('admin.doLogin');
+    Route::get('/dashboard/login', [AuthController::class, 'login'])->name('admin.login');
+    Route::post('/dashboard/do-login', [AuthController::class, 'doLogin'])->name('admin.doLogin');
     Route::get('/dashboard', [HomeController::class, 'index'])->name('admin.home');
-   
+
 });
