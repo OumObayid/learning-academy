@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -18,9 +19,8 @@ class AutController extends Controller
           'email' => 'required|email|max:191',
           'password' => 'required|string'
         ]);
-
-        if( Auth::attempt(['email' => $data['email'], 'password' => $data['password'] ]) )
-            return back();
+        if (Auth::attempt(['email' => $data['email'], 'password' => $data['password']]))
+         return back();
         else  return redirect(route('admin.home'));
     }
 }
