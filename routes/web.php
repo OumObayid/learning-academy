@@ -32,10 +32,11 @@ Route::namespace('Front')->group(function(){
 Route::namespace('Front')->prefix('dashboard')->group(function(){
     Route::get('/login', [AuthController::class, 'login'])->name('admin.login');
     Route::post('/do-login', [AuthController::class, 'doLogin'])->name('admin.doLogin');
-    Route::middleware('adminAuth->admin')->group(function(){
-        Route::get('/logout', [AuthController::class, 'logout'])->name('admin.logout');
-        Route::get('/', [HomeController::class, 'index'])->name('admin.home');
-    });
+    // Route::middleware('adminAuth->admin')->group(function(){
+
+    // });
+    Route::get('/logout', [AuthController::class, 'logout'])->name('admin.logout');
+    Route::get('/', [HomeController::class, 'index'])->name('admin.home');
 
 
 });
