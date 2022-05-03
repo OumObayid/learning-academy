@@ -34,3 +34,6 @@ use App\Http\Controllers\Front\HomepageController;
     Route::get('/logout', [AuthController::class, 'logout'])->name('admin.logout');
     Route::get('/', [HomeController::class, 'index'])->name('admin.home');
     });
+    // Route::get('/dashboard', function () {
+    //     return view('dashboard');
+    // })->middleware(['auth'])->name('dashboard');

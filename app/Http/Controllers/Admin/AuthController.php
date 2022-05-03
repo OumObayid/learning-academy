@@ -20,14 +20,14 @@ class AuthController extends Controller
           'email' => 'required|email|max:191',
           'password' => 'required|string'
         ]);
-        if (! Auth::attempt(['email' => $data['email'], 'password' => $data['password']]))
+        if (! auth()->guard('admin')->attempt(['email' => $data['email'], 'password' => $data['password']]))
          return back();
         else  return redirect(route('admin.home'));
     }
 
-    // public function logout()
-    // {
-    //     Auth::guard('user')->logout();
-    //     return redirect(route('admin.login'));
-    // }
+    public function logout()
+    {
+        auth()->guard('admin')->logout();
+        return redirect(route('admin.login'));
+    }
 }
