@@ -17,10 +17,10 @@ return [
         'guard' => 'web',
         'passwords' => 'users',
     ],
-    'defaults' => [
-        'guard' => 'admin',
-        'passwords' => 'admins',
-    ],
+    // 'defaults' => [
+    //     'guard' => 'admin',
+    //     'passwords' => 'admins',
+    // ],
 
 
 
