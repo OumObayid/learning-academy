@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\AutController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Front\CourseController;
 use App\Http\Controllers\Front\ContactController;
@@ -29,6 +30,8 @@ Route::namespace('Front')->group(function(){
 });
 
 Route::namespace('Front')->group(function(){
+    Route::get('/dashboard/login', [AutController::class, 'login'])->name('admin.login');
+    Route::post('/dashboard/do-login', [AutController::class, 'doLogin'])->name('admin.doLogin');
     Route::get('/dashboard', [HomeController::class, 'index'])->name('admin.home');
    
 });
