@@ -13,6 +13,7 @@ class AuthController extends Controller
     {
         return view('admin.auth.login');
     }
+
     public function doLogin(Request $request)
     {
         $data = $request->validate([
@@ -22,5 +23,11 @@ class AuthController extends Controller
         if (! Auth::attempt(['email' => $data['email'], 'password' => $data['password']]))
          return back();
         else  return redirect(route('admin.home'));
+    }
+
+    public function logout()
+    {
+        Auth::guard('admin')->logout();
+        return redirect(route('admin.login'));
     }
 }
