@@ -18,9 +18,10 @@ return [
         'passwords' => 'users',
     ],
     'defaults' => [
-        'guard' => 'admins',
+        'guard' => 'admin',
         'passwords' => 'admins',
     ],
+
 
 
 
@@ -46,7 +47,7 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
-        'admins' => [
+        'admin' => [
             'driver' => 'session',
             'provider' => 'admins',
         ],
