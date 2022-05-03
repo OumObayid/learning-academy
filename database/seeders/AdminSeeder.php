@@ -16,11 +16,13 @@ class AdminSeeder extends Seeder
     public function run()
     {
         Admin::create([
-            'username' => 'oumaimato',              
+            'username' => 'oumaimato',
             'email' => 'admin@gmail.com',
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
-           
-            
+
+
           ]);
     }
 }
+// ou executer tinker en ligne de commande:
+// \App\Models\Admin::create(['username'=>'oumaimato','email'=>'admin@gmail.com','password'=>bcrypt('password')])

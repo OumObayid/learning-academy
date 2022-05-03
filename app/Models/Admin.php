@@ -7,7 +7,7 @@ use Illuminate\Foundation\Auth\Admin as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
 class Admin extends Authenticatable
-{ 
+{
     use  Notifiable;
     protected $fillable = [
         'username',
@@ -16,7 +16,6 @@ class Admin extends Authenticatable
     ];
 
     protected $hidden = [
-        'password',
-        'remember_token',
+        'password'
     ];
 }

@@ -19,7 +19,7 @@ class AuthController extends Controller
           'email' => 'required|email|max:191',
           'password' => 'required|string'
         ]);
-        if (Auth::attempt(['email' => $data['email'], 'password' => $data['password']]))
+        if (! Auth::attempt(['email' => $data['email'], 'password' => $data['password']]))
          return back();
         else  return redirect(route('admin.home'));
     }
