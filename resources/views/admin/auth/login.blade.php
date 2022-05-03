@@ -13,6 +13,7 @@
 <body>
     <div class="container m-5 p-5">
         <form method="POST" action="{{ route('admin.doLogin')  }}">
+            @csrf
             <div class="form-group">
                 <label for="exampleInputEmail1">Email address</label>
                 <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
