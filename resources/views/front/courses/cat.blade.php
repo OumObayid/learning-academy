@@ -35,9 +35,9 @@
                     <div class="single_special_cource">
                         <img src="{{ asset('uploads/courses/'. $c->img) }}" class="special_img" alt="">
                         <div class="special_cource_text">
-                            <a href="course-details.html" style="width: 50%; text-align: center;" class="btn_4">{{$c->cat->name}}</a>
+                            <a href="{{ route('front.cat',$c->cat->id) }}" style="width: 50%; text-align: center;" class="btn_4">{{$c->cat->name}}</a>
                             <h4>${{$c->price}}</h4>
-                            <a href="course-details.html"><h3>{{$c->name}}</h3></a>
+                            <a href="{{ route('front.show',[$c->cat->id,$c->id]) }}"><h3>{{$c->name}}</h3></a>
                             <p>{{$c->small_desc}}</p>
                             <div class="author_info">
                                 <div class="author_img">
