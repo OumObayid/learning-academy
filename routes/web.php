@@ -4,10 +4,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\CatController;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\front\CourseController;
+use App\Http\Controllers\Admin\TrainerController;
 use App\Http\Controllers\Front\ContactController;
 use App\Http\Controllers\front\MessageController;
 use App\Http\Controllers\Front\HomepageController;
-use App\Http\Controllers\front\CourseController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,12 +36,21 @@ use App\Http\Controllers\front\CourseController;
         Route::middleware('adminAuth:admin')->group(function(){
             Route::get('/logout', [AuthController::class, 'logout'])->name('admin.logout');
             Route::get('/', [HomeController::class, 'index'])->name('admin.home');
+            //categoried
             Route::get('/cats', [CatController::class, 'index'])->name('admin.cats.index');
             Route::get('/cats/create', [CatController::class, 'create'])->name('admin.cats.create');
             Route::post('/cats/store', [CatController::class, 'store'])->name('admin.cats.store');
             Route::get('/cats/edit/{id}', [CatController::class, 'edit'])->name('admin.cats.edit');
             Route::post('/cats/update', [CatController::class, 'update'])->name('admin.cats.update');
             Route::get('/cats/delete/{id}', [CatController::class, 'delete'])->name('admin.cats.delete');
+            //trainers
+            Route::get('/trainers', [TrainerController::class, 'index'])->name('admin.trainers.index');
+            Route::get('/trainers/create', [TrainerController::class, 'create'])->name('admin.trainers.create');
+            Route::post('/trainers/store', [TrainerController::class, 'store'])->name('admin.trainers.store');
+            Route::get('/trainers/edit/{id}', [TrainerController::class, 'edit'])->name('admin.trainers.edit');
+            Route::post('/trainers/update', [TrainerController::class, 'update'])->name('admin.trainers.update');
+            Route::get('/trainers/delete/{id}', [TrainerController::class, 'delete'])->name('admin.trainers.delete');
+
 
         });
 

@@ -18,10 +18,11 @@ class ViewServiceProvider extends ServiceProvider
             $view->with('cats',Cat::select('id','name')->get());
             $view->with('sett',Setting::select('logo','favicon')->first());
         });
+        
         view()->composer('front.inc.footer', function($view) {
             $view->with('sett',Setting::first());
         });
-      
+
     }
 
     /**
