@@ -2,15 +2,15 @@
 @section('content')
 <div class="d-flex justify-content-between mb-3">
   <h6>Categories</h6>
-    <button class="btn btn-sm btn-primary">Add new</button>
+    <a class="btn btn-sm btn-primary mr-2" href="{{ route('admin.cats.create') }}">Add new</a>
 </div>
 
     <table class="table">
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">name</th>
-            <th scope="col">action</th>
+            <th scope="col">Name</th>
+            <th scope="col" class="d-flex justify-content-end">Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -18,9 +18,9 @@
                 <tr>
                     <th scope="row">{{ $loop->iteration }}</th>
                     <td>{{ $cat->name }}</td>
-                    <td>
-                        <button class="btn btn-sm btn-info">Edit</button>
-                        <button class="btn btn-sm btn-danger">Delete</button>
+                    <td class="d-flex justify-content-end">
+                        <a class="btn btn-sm btn-info " href="{{ route('admin.cats.edit',$cat->id) }}">Edit</a>
+                        <a class="btn btn-sm btn-danger ml-3" href="{{ route('admin.cats.delete',$cat->id) }}">Delete</a>
                     </td>
                 </tr>
           @endforeach
