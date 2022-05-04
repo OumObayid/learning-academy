@@ -36,6 +36,12 @@ use App\Http\Controllers\Front\HomepageController;
             Route::get('/logout', [AuthController::class, 'logout'])->name('admin.logout');
             Route::get('/', [HomeController::class, 'index'])->name('admin.home');
             Route::get('/cats', [CatController::class, 'index'])->name('admin.cats.index');
+            Route::get('/cats/create', [CatController::class, 'create'])->name('admin.cats.create');
+            Route::post('/cats/store', [CatController::class, 'store'])->name('admin.cats.store');
+            Route::get('/cats/edit/{id}', [CatController::class, 'edit'])->name('admin.cats.edit');
+            Route::post('/cats/update', [CatController::class, 'update'])->name('admin.cats.update');
+            Route::get('/cats/delete/{id}', [CatController::class, 'delete'])->name('admin.cats.delete');
+
         });
 
     });
