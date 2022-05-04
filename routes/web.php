@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\CatController;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Front\CourseController;
@@ -29,10 +30,14 @@ use App\Http\Controllers\Front\HomepageController;
     });
 
     Route::namespace('Front')->prefix('dashboard')->group(function(){
-    Route::get('/login', [AuthController::class, 'login'])->name('admin.login');
-    Route::post('/do-login', [AuthController::class, 'doLogin'])->name('admin.doLogin');
-    Route::get('/logout', [AuthController::class, 'logout'])->name('admin.logout');
-    Route::get('/', [HomeController::class, 'index'])->name('admin.home');
+        Route::get('/login', [AuthController::class, 'login'])->name('admin.login');
+        Route::post('/do-login', [AuthController::class, 'doLogin'])->name('admin.doLogin');
+        Route::middleware('adminAuth:admin')->group(function(){
+            Route::get('/logout', [AuthController::class, 'logout'])->name('admin.logout');
+            Route::get('/', [HomeController::class, 'index'])->name('admin.home');
+            Route::get('/cats', [CatController::class, 'index'])->name('admin.cats.index');
+        });
+
     });
     // Route::get('/dashboard', function () {
     //     return view('dashboard');
