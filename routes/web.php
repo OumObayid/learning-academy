@@ -1,11 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+//controller for admin
 use App\Http\Controllers\Admin\CatController;
+use App\Http\Controllers\Admin\TrainerController;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Admin\CourseAdminController;
+//controller for front
 use App\Http\Controllers\front\CourseController;
-use App\Http\Controllers\Admin\TrainerController;
 use App\Http\Controllers\Front\ContactController;
 use App\Http\Controllers\front\MessageController;
 use App\Http\Controllers\Front\HomepageController;
@@ -36,7 +39,7 @@ use App\Http\Controllers\Front\HomepageController;
         Route::middleware('adminAuth:admin')->group(function(){
             Route::get('/logout', [AuthController::class, 'logout'])->name('admin.logout');
             Route::get('/', [HomeController::class, 'index'])->name('admin.home');
-            //categoried
+            //categories
             Route::get('/cats', [CatController::class, 'index'])->name('admin.cats.index');
             Route::get('/cats/create', [CatController::class, 'create'])->name('admin.cats.create');
             Route::post('/cats/store', [CatController::class, 'store'])->name('admin.cats.store');
@@ -50,6 +53,14 @@ use App\Http\Controllers\Front\HomepageController;
             Route::get('/trainers/edit/{id}', [TrainerController::class, 'edit'])->name('admin.trainers.edit');
             Route::post('/trainers/update', [TrainerController::class, 'update'])->name('admin.trainers.update');
             Route::get('/trainers/delete/{id}', [TrainerController::class, 'delete'])->name('admin.trainers.delete');
+
+            //courses
+            Route::get('/courses', [CourseAdminController::class, 'index'])->name('admin.courses.index');
+            Route::get('/courses/create', [CourseAdminController::class, 'create'])->name('admin.courses.create');
+            Route::post('/courses/store', [CourseAdminController::class, 'store'])->name('admin.courses.store');
+            Route::get('/courses/edit/{id}', [CourseAdminController::class, 'edit'])->name('admin.courses.edit');
+            Route::post('/courses/update', [CourseAdminController::class, 'update'])->name('admin.courses.update');
+            Route::get('/courses/delete/{id}', [CourseAdminController::class, 'delete'])->name('admin.courses.delete');
 
 
         });
