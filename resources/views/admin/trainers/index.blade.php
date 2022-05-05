@@ -23,7 +23,13 @@
 
                     <td><img src="{{ asset('uploads/trainers/'. $trainer->img) }}"  width="50"/> </td>
                     <td>{{ $trainer->name }}</td>
-                    <td>{{ $trainer->phone }}</td>
+                    <td>
+                        @if ($trainer->phone !=null)
+                        {{ $trainer->phone }}
+                        @else
+                        not exist
+                        @endif
+                    </td>
                     <td>{{ $trainer->spec }}</td>
                     <td class="d-flex justify-content-end">
                         <a class="btn btn-sm btn-info " href="{{ route('admin.trainers.edit',$trainer->id) }}">Edit</a>
