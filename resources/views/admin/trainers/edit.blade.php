@@ -20,7 +20,7 @@
         <label>Speciality</label>
         <input required type="text" name="spec" class="form-control" value="{{ $trainer->spec }}">
     </div>
-    <img src="{{ asset('uploads/trainers/'.$trainer->img) }}" height="100px">
+    <img src="{{ asset('uploads/trainers/'.$trainer->img) }}" height="100px" class="my-3">
     <div class="form-group">
         <input type="file" name="img" class="form-control-file">
     </div>

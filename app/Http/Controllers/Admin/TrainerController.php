@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-use App\Models\Trainer;
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use Image;
+use App\Models\Trainer;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 
 
 class TrainerController extends Controller
@@ -61,14 +62,35 @@ class TrainerController extends Controller
         'name' => 'required|max:50',
         'phone' => 'nullable|max:20',
         'spec' => 'required|max:50',
-        'img' => 'required|image|mimes:jpg,jpeg,png',
+        'img' => 'nullable|image|mimes:jpg,jpeg,png',
        ]);
+       $old_name = Trainer::findOrFail($request->id)->img;
+       if ($request->hasFile('img'))
+       {
+        //supprimer l'ancien image
+         Storage::disk('uploads')->delete('trainers/'. $old_name);
+        // ajouter la nouvelle image
+        $image = $request->file('img');
+        $imageName = time().'.'.$image->extension();
+        $destinationPath = public_path('/uploads/trainers');
+
+        $img = Image::make($image->path());
+        $img->resize(50, 50, function ($constraint) {
+            $constraint->aspectRatio();
+        })->save($destinationPath.'/'.$imageName);
+        $data['img']=$imageName;
+       }
+       else $data['img']= $old_name;
+
        Trainer::findOrFail($request->id)->update($data);
        return back();
     }
 
     public function delete($id)
     {
+        $old_name = Trainer::findOrFail($id)->img;
+        Storage::disk('uploads')->delete('trainers/'. $old_name);
+
         Trainer::findOrFail($id)->delete();
        return back();
     }
