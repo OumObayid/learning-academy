@@ -2,13 +2,17 @@
 
 namespace App\Http\Controllers\Admin;
 use Image;
+use App\Models\Cat;
 use App\Models\Course;
+use App\Models\Trainer;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
 
+
 class CourseAdminController extends Controller
 {
+
     public function index()
     {
         $data['courses'] = Course::select ('id','name','price','img')->orderBy('id','DESC')->get();
@@ -17,29 +21,30 @@ class CourseAdminController extends Controller
 
     public function create()
     {
-       return view('admin.courses.create');
+        $data['cats'] = Cat::select('id','name')->get();
+        $data['trainers'] = Trainer::select('id','name')->get();
+
+       return view('admin.courses.create')->with($data);
     }
 
     public function store(Request $request)
     {
        $data = $request -> validate([
            'name' => 'required|max:50',
-           'phone' => 'nullable|max:20',
-           'spec' => 'required|max:50',
+           'small_desc' => 'required|string|max:180',
+           'desc' => 'required|string',
+           'price' => 'required|integer',
+           'cat_id' => 'required|exists:cats,id',
+           'trainer_id' => 'required|exists:trainers,id',
            'img' => 'required|image|mimes:jpg,jpeg,png',
        ]);
-
-    //     $new_name = $data['img']->hashName();
-    //    Image::make($data['img']->resize(50, 50)->save(public_path('uploads/courses/'. $new_name)));
-
-    //     // dd( $new_name);
 
         $image = $request->file('img');
         $imageName = time().'.'.$image->extension();
         $destinationPath = public_path('/uploads/courses');
 
         $img = Image::make($image->path());
-        $img->resize(50, 50, function ($constraint) {
+        $img->resize(970, 520, function ($constraint) {
             $constraint->aspectRatio();
         })->save($destinationPath.'/'.$imageName);
         $data['img']=$imageName;
@@ -52,6 +57,9 @@ class CourseAdminController extends Controller
     public function edit($id)
     {
        $data['course'] = Course:: findOrFail($id);
+       $data['cats'] = Cat:: select('id','name')->get();
+       $data['trainers'] = Trainer:: select('id','name')->get();
+
        return view('admin.courses.edit')->with($data);
     }
 
@@ -59,8 +67,11 @@ class CourseAdminController extends Controller
     {
        $data = $request -> validate([
         'name' => 'required|max:50',
-        'phone' => 'nullable|max:20',
-        'spec' => 'required|max:50',
+        'small_desc' => 'required|string|max:180',
+        'desc' => 'required|string',
+        'price' => 'required|integer',
+        'cat_id' => 'required|exists:cats,id',
+        'trainer_id' => 'required|exists:trainers,id',
         'img' => 'nullable|image|mimes:jpg,jpeg,png',
        ]);
        $old_name = Course::findOrFail($request->id)->img;
@@ -74,7 +85,7 @@ class CourseAdminController extends Controller
         $destinationPath = public_path('/uploads/courses');
 
         $img = Image::make($image->path());
-        $img->resize(50, 50, function ($constraint) {
+        $img->resize(970, 520, function ($constraint) {
             $constraint->aspectRatio();
         })->save($destinationPath.'/'.$imageName);
         $data['img']=$imageName;
