@@ -20,10 +20,6 @@
         <label>Speciality</label>
         <input type="text" name="spec" class="form-control" value="{{ $student->spec }}">
     </div>
-    <img src="{{ asset('uploads/students/'.$student->img) }}" height="100px" class="my-3">
-    <div class="form-group">
-        <input type="file" name="img" class="form-control-file">
-    </div>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 

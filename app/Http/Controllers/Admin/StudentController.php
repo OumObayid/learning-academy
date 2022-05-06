@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Controller;
+use App\Models\Student;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class StudentController extends Controller
 {
@@ -32,7 +33,7 @@ class StudentController extends Controller
 
     public function edit($id)
     {
-       $data['trainer'] = Student:: findOrFail($id);
+       $data['student'] = Student:: findOrFail($id);
        return view('admin.students.edit')->with($data);
     }
 

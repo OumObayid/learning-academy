@@ -34,6 +34,8 @@ class MessageController extends Controller
 
     public function enroll( Request $request)
     {
+        $student_id=null;
+
         $data = $request->validate([
             'name' => 'nullable|string|max:191',
             'email' => 'required|email|max:191',
@@ -41,14 +43,22 @@ class MessageController extends Controller
             'course_id' => 'required|exists:courses,id'
         ]);
 
-        $student = Student::create([
-                    'name' => $data['name'],
-                    'email' => $data['email'],
-                    'spec' => $data['spec'],
-                  
-                   ]);
+        $old_student = Student::select('id')->where('email',$data['email'])->first();
 
-        $student_id = $student->id;
+        // if student do not exist, 
+        if ( $old_student == null){
+            $student = Student::create([
+                'name' => $data['name'],
+                'email' => $data['email'],
+                'spec' => $data['spec'],
+               ]);
+            $student_id = $student->id;
+        }
+         // if student exist
+         else
+        {
+            $student_id = $old_student['id'];
+        }
 
         DB::table('course_student')->insert([
             'course_id' =>$data['course_id'],
