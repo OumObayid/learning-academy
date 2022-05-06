@@ -3,15 +3,16 @@
 use Illuminate\Support\Facades\Route;
 //controller for admin
 use App\Http\Controllers\Admin\CatController;
-use App\Http\Controllers\Admin\TrainerController;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\HomeController;
-use App\Http\Controllers\Admin\CourseAdminController;
-//controller for front
 use App\Http\Controllers\front\CourseController;
+use App\Http\Controllers\Admin\StudentController;
+//controller for front
+use App\Http\Controllers\Admin\TrainerController;
 use App\Http\Controllers\Front\ContactController;
 use App\Http\Controllers\front\MessageController;
 use App\Http\Controllers\Front\HomepageController;
+use App\Http\Controllers\Admin\CourseAdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -61,6 +62,14 @@ use App\Http\Controllers\Front\HomepageController;
             Route::get('/courses/edit/{id}', [CourseAdminController::class, 'edit'])->name('admin.courses.edit');
             Route::post('/courses/update', [CourseAdminController::class, 'update'])->name('admin.courses.update');
             Route::get('/courses/delete/{id}', [CourseAdminController::class, 'delete'])->name('admin.courses.delete');
+
+            //students
+            Route::get('/students', [StudentController::class, 'index'])->name('admin.students.index');
+            Route::get('/students/create', [StudentController::class, 'create'])->name('admin.students.create');
+            Route::post('/students/store', [StudentController::class, 'store'])->name('admin.students.store');
+            Route::get('/students/edit/{id}', [StudentController::class, 'edit'])->name('admin.students.edit');
+            Route::post('/students/update', [StudentController::class, 'update'])->name('admin.students.update');
+            Route::get('/students/delete/{id}', [StudentController::class, 'delete'])->name('admin.students.delete');
 
 
         });
