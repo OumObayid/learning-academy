@@ -9,7 +9,6 @@
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">Img</th>
             <th scope="col">Name</th>
             <th scope="col">Email</th>
             <th scope="col">Spec</th>

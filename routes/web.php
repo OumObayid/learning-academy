@@ -23,23 +23,31 @@ use App\Http\Controllers\Admin\CourseAdminController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+    //Front
     Route::namespace('Front')->group(function(){
-    Route::get('/', [HomepageController::class, 'index'])->name('front.homepage');
-    Route::get('/cat/{id}', [CourseController::class, 'cat'])->name('front.cat');
-    Route::get('/cat/{id}/course/{c_id}', [CourseController::class, 'show'])->name('front.show');
-    Route::get('/contact', [ContactController::class, 'index'])->name('front.contact');
-    Route::post('/message/newsletter', [MessageController::class, 'newsletter'])->name('front.message.newsletter');
-    Route::post('/message/contact', [MessageController::class, 'contact'])->name('front.message.contact');
-    Route::post('/message/enroll', [MessageController::class, 'enroll'])->name('front.message.enroll');
+        Route::get('/', [HomepageController::class, 'index'])->name('front.homepage');
+        Route::get('/cat/{id}', [CourseController::class, 'cat'])->name('front.cat');
+        Route::get('/cat/{id}/course/{c_id}', [CourseController::class, 'show'])->name('front.show');
+        Route::get('/contact', [ContactController::class, 'index'])->name('front.contact');
+        Route::post('/message/newsletter', [MessageController::class, 'newsletter'])->name('front.message.newsletter');
+        Route::post('/message/contact', [MessageController::class, 'contact'])->name('front.message.contact');
+        Route::post('/message/enroll', [MessageController::class, 'enroll'])->name('front.message.enroll');
     });
 
+    //Admin
     Route::namespace('Admin')->prefix('dashboard')->group(function(){
+
+        //login
         Route::get('/login', [AuthController::class, 'login'])->name('admin.login');
         Route::post('/do-login', [AuthController::class, 'doLogin'])->name('admin.doLogin');
+
+        //Dashboard
         Route::middleware('adminAuth:admin')->group(function(){
+            //log out
             Route::get('/logout', [AuthController::class, 'logout'])->name('admin.logout');
+            //Admin home
             Route::get('/', [HomeController::class, 'index'])->name('admin.home');
+
             //categories
             Route::get('/cats', [CatController::class, 'index'])->name('admin.cats.index');
             Route::get('/cats/create', [CatController::class, 'create'])->name('admin.cats.create');
@@ -47,6 +55,7 @@ use App\Http\Controllers\Admin\CourseAdminController;
             Route::get('/cats/edit/{id}', [CatController::class, 'edit'])->name('admin.cats.edit');
             Route::post('/cats/update', [CatController::class, 'update'])->name('admin.cats.update');
             Route::get('/cats/delete/{id}', [CatController::class, 'delete'])->name('admin.cats.delete');
+
             //trainers
             Route::get('/trainers', [TrainerController::class, 'index'])->name('admin.trainers.index');
             Route::get('/trainers/create', [TrainerController::class, 'create'])->name('admin.trainers.create');
@@ -70,7 +79,14 @@ use App\Http\Controllers\Admin\CourseAdminController;
             Route::get('/students/edit/{id}', [StudentController::class, 'edit'])->name('admin.students.edit');
             Route::post('/students/update', [StudentController::class, 'update'])->name('admin.students.update');
             Route::get('/students/delete/{id}', [StudentController::class, 'delete'])->name('admin.students.delete');
+
+            //student courses
             Route::get('/students/show-courses/{id}', [StudentController::class, 'showCourses'])->name('admin.students.showCourses');
+            Route::get('/students/{id}/add-to-course', [StudentController::class, 'addCourse'])->name('admin.students.addCourse');
+            Route::post('/students/{id}/storeCourse', [StudentController::class, 'storeCourse'])->name('admin.students.storeCourse');
+            Route::get('/students/{id}/courses/{c_id}/approve', [StudentController::class, 'approveCourse'])->name('admin.students.approveCourse');
+            Route::get('/students/{id}/courses/{c_id}/reject', [StudentController::class, 'rejectCourse'])->name('admin.students.rejectCourse');
+            Route::get('/students/{id}/courses/{c_id}/delete', [StudentController::class, 'deleteCourse'])->name('admin.students.deleteCourse');
 
 
         });
