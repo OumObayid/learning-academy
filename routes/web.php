@@ -70,6 +70,7 @@ use App\Http\Controllers\Admin\CourseAdminController;
             Route::get('/students/edit/{id}', [StudentController::class, 'edit'])->name('admin.students.edit');
             Route::post('/students/update', [StudentController::class, 'update'])->name('admin.students.update');
             Route::get('/students/delete/{id}', [StudentController::class, 'delete'])->name('admin.students.delete');
+            Route::get('/students/show-courses/{id}', [StudentController::class, 'showCourses'])->name('admin.students.showCourses');
 
 
         });

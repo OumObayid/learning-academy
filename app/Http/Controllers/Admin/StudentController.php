@@ -23,7 +23,7 @@ class StudentController extends Controller
     {
        $data = $request -> validate([
            'name' => 'required|max:50',
-           'email' => 'required|max:50',
+           'email' => 'required|email|max:50|unique:students',
            'spec' => 'nullable|max:50',
        ]);
 
@@ -41,7 +41,7 @@ class StudentController extends Controller
     {
        $data = $request -> validate([
         'name' => 'required|max:50',
-        'email' => 'required|max:50',
+        'email' => 'required|email|max:50|unique:students',
         'spec' => 'nullable|max:50',
        ]);
 
@@ -54,4 +54,11 @@ class StudentController extends Controller
         Student::findOrFail($id)->delete();
        return back();
     }
+
+    public function showCourses($id)
+    {
+       $data['courses'] = Student:: findOrFail($id)->courses;
+       return view('admin.students.showCourses')->with($data);
+    }
+
 }

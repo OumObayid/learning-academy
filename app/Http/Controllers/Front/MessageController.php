@@ -45,7 +45,7 @@ class MessageController extends Controller
 
         $old_student = Student::select('id')->where('email',$data['email'])->first();
 
-        // if student do not exist, 
+        // if student do not exist,
         if ( $old_student == null){
             $student = Student::create([
                 'name' => $data['name'],
@@ -58,6 +58,13 @@ class MessageController extends Controller
          else
         {
             $student_id = $old_student['id'];
+
+            //update the name and spec
+            if ( $data['name'] !== null)
+                   $old_student->update(['name' => $data['name']]);
+
+            if ( $data['spec'] !== null)
+                   $old_student->update(['spec' => $data['spec']]);
         }
 
         DB::table('course_student')->insert([

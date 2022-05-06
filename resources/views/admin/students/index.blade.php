@@ -32,6 +32,7 @@
                     <td class="d-flex justify-content-end">
                         <a class="btn btn-sm btn-info " href="{{ route('admin.students.edit',$student->id) }}">Edit</a>
                         <a class="btn btn-sm btn-danger ml-3" href="{{ route('admin.students.delete',$student->id) }}">Delete</a>
+                        <a class="btn btn-sm btn-primary ml-3" href="{{ route('admin.students.showCourses',$student->id) }}">Show courses</a>
                     </td>
                 </tr>
           @endforeach
