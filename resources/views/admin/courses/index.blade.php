@@ -11,6 +11,9 @@
             <th scope="col">#</th>
             <th scope="col">Img</th>
             <th scope="col">Name</th>
+            <th scope="col">Categorie</th>
+            <th scope="col">Trainer</th>
+
             <th scope="col">Price</th>
             <th scope="col" class="d-flex justify-content-end">Actions</th>
           </tr>
@@ -22,6 +25,8 @@
 
                     <td><img src="{{ asset('uploads/courses/'. $course->img) }}"  width="50"/> </td>
                     <td>{{ $course->name }}</td>
+                    <td>{{ $course->cat->name }}</td>
+                    <td>{{ $course->trainer->name }}</td>
                     <td>{{ $course->price }}</td>
                     <td class="d-flex justify-content-end">
                         <a class="btn btn-sm btn-info " href="{{ route('admin.courses.edit',$course->id) }}">Edit</a>

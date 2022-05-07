@@ -22,7 +22,7 @@ class CatController extends Controller
     public function store(Request $request)
     {
        $data = $request -> validate([
-           'name' => 'required|max:20'
+           'name' => 'required|max:255'
        ]);
        Cat::create($data);
        return redirect(route('admin.cats.index'));
@@ -37,7 +37,7 @@ class CatController extends Controller
     public function update(Request $request)
     {
        $data = $request -> validate([
-           'name' => 'required|max:20'
+           'name' => 'required|max:255'
        ]);
        Cat::findOrFail($request->id)->update($data);
        return back();

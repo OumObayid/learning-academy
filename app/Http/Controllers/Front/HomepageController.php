@@ -16,7 +16,7 @@ class HomepageController extends Controller
         $data['banner'] = SiteContent:: select('content')->where('name','banner')->first();
         $data['courses'] = Course:: select('id', 'name', 'small_desc', 'cat_id', 'trainer_id', 'img', 'price')
         ->orderBy('id', 'desc')
-        ->take('3')
+        ->take('6')
         ->get();
         $data['courses_count'] = Course::count();
         $data['trainers_count'] = Trainer::count();

@@ -12,7 +12,7 @@ class CourseController extends Controller
     public function cat($id)
     {
         $data['cat'] = Cat::findOrFail($id);
-        $data['courses'] = Course::where('cat_id',$id)->paginate(3);
+        $data['courses'] = Course::where('cat_id',$id)->paginate(6);
         return view('front.courses.cat')->with($data);
     }
     public function show($id,$c_id)

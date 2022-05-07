@@ -28,7 +28,7 @@
                         <img class="img-fluid" src="{{ asset('uploads/courses/'.$course->img) }}" alt="">
                     </div>
                     <div class="content_wrapper pt-5">
-                       {!! $course->desc !!}
+                       {!! nl2br($course->desc) !!}
                     </div>
                 </div>
 
@@ -52,11 +52,11 @@
                     </div>
                     <div class="my-5">
                        @include('front.inc.errors')
-                   
+
                             <form class="form-contact contact_form" action="{{ route('front.message.enroll') }}" method="post" id="contactForm" >
                             @csrf
-                            <div class="row">  
-                                <input type="hidden" name="course_id" value={{ $course->id }} />                   
+                            <div class="row">
+                                <input type="hidden" name="course_id" value={{ $course->id }} />
                                 <div class="col-12">
                                 <div class="form-group">
                                     <input class="form-control" name="name"  type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder = 'Enter your name'>
@@ -67,7 +67,7 @@
                                     <input class="form-control" name="email"  type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder = 'Enter email address'>
                                 </div>
                                 </div>
-                                <div class="col-12">                               
+                                <div class="col-12">
                                 <div class="form-group">
                                     <input class="form-control" name="spec"  type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your Speciality'" placeholder = 'Enter your Speciality'>
                                 </div>
@@ -76,7 +76,7 @@
                             <div class="form-group mt-3">
                                 <button type="submit" class="button button-contactForm btn_1">Enroll</button>
                             </div>
-                            </form>                
+                            </form>
                     </div>
 
                 </div>

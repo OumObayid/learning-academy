@@ -15,7 +15,7 @@ class CourseAdminController extends Controller
 
     public function index()
     {
-        $data['courses'] = Course::select ('id','name','price','img')->orderBy('id','DESC')->get();
+        $data['courses'] = Course::select ('id','name','cat_id','trainer_id', 'price','img')->orderBy('id','DESC')->get();
         return view('admin.courses.index')->with($data);
     }
 
@@ -30,7 +30,7 @@ class CourseAdminController extends Controller
     public function store(Request $request)
     {
        $data = $request -> validate([
-           'name' => 'required|max:50',
+           'name' => 'required|max:100',
            'small_desc' => 'required|string|max:180',
            'desc' => 'required|string',
            'price' => 'required|integer',
@@ -66,7 +66,7 @@ class CourseAdminController extends Controller
     public function update(Request $request)
     {
        $data = $request -> validate([
-        'name' => 'required|max:50',
+        'name' => 'required|max:100',
         'small_desc' => 'required|string|max:180',
         'desc' => 'required|string',
         'price' => 'required|integer',
