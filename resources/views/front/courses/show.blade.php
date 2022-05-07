@@ -38,15 +38,15 @@
                         <ul>
                             <li>
                                 <a class="justify-content-between d-flex" href="#">
-                                    <p>Trainer’s Name</p>
+                                    <p>Trainer’s Name: </p>
                                     <span class="color">{{ $course->trainer->name }}</span>
                                 </a>
                             </li>
                             <li>
-                                <a class="justify-content-between d-flex" href="#">
-                                    <p> {{ $course->name }} </p>
-                                    <span>${{ $course->price }}</span>
-                                </a>
+                                <div class="justify-content-between d-flex ">
+                                    <div class="w-75"> {{ $course->name }} </div>
+                                    <div class="w-25 text-right h4 text-danger">${{ $course->price }}</div>
+                                </div>
                             </li>
                         </ul>
                     </div>

@@ -40,9 +40,7 @@ class TrainerController extends Controller
         $destinationPath = public_path('/uploads/trainers');
 
         $img = Image::make($image->path());
-        $img->resize(50, 50, function ($constraint) {
-            $constraint->aspectRatio();
-        })->save($destinationPath.'/'.$imageName);
+        $img->resize(50, 50)->save($destinationPath.'/'.$imageName);
         $data['img']=$imageName;
 
 
@@ -75,9 +73,7 @@ class TrainerController extends Controller
         $destinationPath = public_path('/uploads/trainers');
 
         $img = Image::make($image->path());
-        $img->resize(50, 50, function ($constraint) {
-            $constraint->aspectRatio();
-        })->save($destinationPath.'/'.$imageName);
+        $img->resize(50, 50)->save($destinationPath.'/'.$imageName);
         $data['img']=$imageName;
        }
        else $data['img']= $old_name;

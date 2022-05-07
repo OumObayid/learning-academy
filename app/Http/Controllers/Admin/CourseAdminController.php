@@ -44,9 +44,7 @@ class CourseAdminController extends Controller
         $destinationPath = public_path('/uploads/courses');
 
         $img = Image::make($image->path());
-        $img->resize(970, 520, function ($constraint) {
-            $constraint->aspectRatio();
-        })->save($destinationPath.'/'.$imageName);
+        $img->resize(970, 520)->save($destinationPath.'/'.$imageName);
         $data['img']=$imageName;
 
 
@@ -85,9 +83,7 @@ class CourseAdminController extends Controller
         $destinationPath = public_path('/uploads/courses');
 
         $img = Image::make($image->path());
-        $img->resize(970, 520, function ($constraint) {
-            $constraint->aspectRatio();
-        })->save($destinationPath.'/'.$imageName);
+        $img->resize(970, 520)->save($destinationPath.'/'.$imageName);
         $data['img']=$imageName;
        }
        else $data['img']= $old_name;
