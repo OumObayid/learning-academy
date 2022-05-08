@@ -2,7 +2,7 @@
 @section('content')
 <div class="d-flex justify-content-between mb-3">
    <h6>Courses / Edit / {{ $course->name }} </h6>
-   <a class="btn btn-sm btn-primary" href="{{ route('admin.courses.index') }}">Back</a>
+   <a class="btn btn-sm btn-secondary" href="{{ route('admin.courses.index') }}">Back</a>
 </div>
 @include('admin.inc.errors')
 <form method="POST" action="{{ route('admin.courses.update') }}" enctype="multipart/form-data">
@@ -47,7 +47,7 @@
     <div class="form-group">
         <input type="file" name="img" class="form-control-file">
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-info">Submit</button>
 </form>
 
 @endsection

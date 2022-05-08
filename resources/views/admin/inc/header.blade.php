@@ -12,7 +12,7 @@
 
 <body>
     {{-- navbar --}}
-    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning shadow ">
         <div class="container-fluid">
             <a class="navbar-brand" href="{{ route('front.homepage') }}">Home</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"

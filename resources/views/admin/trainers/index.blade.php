@@ -2,7 +2,7 @@
 @section('content')
 <div class="d-flex justify-content-between mb-3">
   <h6>Trainers</h6>
-    <a class="btn btn-sm btn-primary mr-2" href="{{ route('admin.trainers.create') }}">Add new</a>
+    <a class="btn btn-sm btn-secondary mr-2" href="{{ route('admin.trainers.create') }}">Add new</a>
 </div>
 
     <table class="table">

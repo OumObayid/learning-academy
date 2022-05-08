@@ -2,7 +2,7 @@
 @section('content')
 <div class="d-flex justify-content-between mb-3">
    <h6>Students / Edit / {{ $student->name }} </h6>
-   <a class="btn btn-sm btn-primary" href="{{ route('admin.students.index') }}">Back</a>
+   <a class="btn btn-sm btn-secondary" href="{{ route('admin.students.index') }}">Back</a>
 </div>
 @include('admin.inc.errors')
 <form method="POST" action="{{ route('admin.students.update') }}" enctype="multipart/form-data">
@@ -20,7 +20,7 @@
         <label>Speciality</label>
         <input type="text" name="spec" class="form-control" value="{{ $student->spec }}">
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-info">Submit</button>
 </form>
 
 @endsection
