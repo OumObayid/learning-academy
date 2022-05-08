@@ -43,9 +43,5 @@ class SettingController extends Controller
        return back();
     }
 
-    public function delete($id)
-    {
-        Setting::findOrFail($id)->delete();
-       return back();
-    }
+    
 }
