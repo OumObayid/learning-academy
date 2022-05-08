@@ -43,7 +43,7 @@ class StudentController extends Controller
     {
        $data = $request -> validate([
         'name' => 'required|max:50',
-        'email' => 'required|email|max:50|unique:students',
+        'email' => 'required|email|max:50',
         'spec' => 'nullable|max:50',
        ]);
 
@@ -79,7 +79,7 @@ class StudentController extends Controller
         ]);
 
         $result['data'] =  DB::table('course_student')->where('student_id',$id)->where('course_id', $data['course_id'] )->first();
-        
+
         if ( $result['data'] == null) {
             DB::table('course_student')->insert([
                 'student_id' => $id,
