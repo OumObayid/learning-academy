@@ -2,7 +2,7 @@
 @section('content')
 <div class="d-flex justify-content-between mb-3">
   <h6>Categories</h6>
-    <a class="btn btn-sm btn-primary mr-2" href="{{ route('admin.cats.create') }}">Add new</a>
+    <a class="btn btn-sm btn-secondary mr-2" href="{{ route('admin.cats.create') }}">Add new</a>
 </div>
 
     <table class="table">

@@ -12,7 +12,7 @@
 
 <body>
     {{-- navbar --}}
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
         <div class="container-fluid">
             <a class="navbar-brand" href="{{ route('front.homepage') }}">Home</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -23,26 +23,26 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{ route('admin.cats.index') }}">Categories</a>
+                        <a class="nav-link" aria-current="page" href="{{ route('admin.cats.index') }}">Categories</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{ route('admin.trainers.index') }}">Trainers</a>
+                        <a class="nav-link" aria-current="page" href="{{ route('admin.trainers.index') }}">Trainers</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{ route('admin.courses.index') }}">Courses</a>
+                        <a class="nav-link" aria-current="page" href="{{ route('admin.courses.index') }}">Courses</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{ route('admin.students.index') }}">Students</a>
+                        <a class="nav-link" aria-current="page" href="{{ route('admin.students.index') }}">Students</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{ route('admin.messages.index') }}">Messages</a>
+                        <a class="nav-link" aria-current="page" href="{{ route('admin.messages.index') }}">Messages</a>
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{ route('admin.setting.index') }}">Setting</a>
+                        <a class="nav-link" aria-current="page" href="{{ route('admin.setting.index') }}">Setting</a>
                     </li><li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{ route('admin.logout') }}">Logout</a>
+                        <a class="nav-link" aria-current="page" href="{{ route('admin.logout') }}">Logout</a>
                     </li>
                 </ul>
             </div>
