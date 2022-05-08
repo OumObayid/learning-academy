@@ -6,8 +6,9 @@ use App\Http\Controllers\Admin\CatController;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\front\CourseController;
-use App\Http\Controllers\Admin\StudentController;
+use App\Http\Controllers\Admin\SettingController;
 //controller for front
+use App\Http\Controllers\Admin\StudentController;
 use App\Http\Controllers\Admin\TrainerController;
 use App\Http\Controllers\Front\ContactController;
 use App\Http\Controllers\front\MessageController;
@@ -95,6 +96,11 @@ use App\Http\Controllers\Admin\MessageAdminController;
             Route::post('/messages/update', [MessageAdminController::class, 'update'])->name('admin.messages.update');
             Route::get('/messages/delete/{id}', [MessageAdminController::class, 'delete'])->name('admin.messages.delete');
             Route::get('/messages/show-message/{id}', [MessageAdminController::class, 'showMessage'])->name('admin.messages.showMessage');
+
+            //setting
+            Route::get('/setting', [SettingController::class, 'index'])->name('admin.setting.index');
+            Route::get('/setting/edit', [SettingController::class, 'edit'])->name('admin.setting.edit');
+            Route::post('/setting/update', [SettingController::class, 'update'])->name('admin.setting.update');
 
         });
 
