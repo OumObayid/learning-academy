@@ -20,4 +20,11 @@ class MessageAdminController extends Controller
         Message::findOrFail($id)->delete();
        return back();
     }
+    public function showMessage($id)
+    {
+        $data['message'] = Message::findOrFail($id)->first();
+        return view('admin.messages.index')->with($data);
+
+    }
+
 }

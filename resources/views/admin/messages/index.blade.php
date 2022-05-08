@@ -28,7 +28,6 @@
                         @endif
                     </td>
                     <td class="d-flex justify-content-end">
-                        <a class="btn btn-sm btn-info " href="{{ route('admin.messages.edit',$message->id) }}">Edit</a>
                         <a class="btn btn-sm btn-danger ml-3" href="{{ route('admin.messages.delete',$message->id) }}">Delete</a>
                         <a class="btn btn-sm btn-primary ml-3" href="{{ route('admin.messages.showMessage',$message->id) }}">Show message</a>
                     </td>

@@ -13,6 +13,7 @@ use App\Http\Controllers\Front\ContactController;
 use App\Http\Controllers\front\MessageController;
 use App\Http\Controllers\Front\HomepageController;
 use App\Http\Controllers\Admin\CourseAdminController;
+use App\Http\Controllers\Admin\MessageAdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -93,6 +94,7 @@ use App\Http\Controllers\Admin\CourseAdminController;
             Route::get('/messages/edit/{id}', [MessageAdminController::class, 'edit'])->name('admin.messages.edit');
             Route::post('/messages/update', [MessageAdminController::class, 'update'])->name('admin.messages.update');
             Route::get('/messages/delete/{id}', [MessageAdminController::class, 'delete'])->name('admin.messages.delete');
+            Route::get('/messages/show-message/{id}', [MessageAdminController::class, 'showMessage'])->name('admin.messages.showMessage');
 
         });
 
