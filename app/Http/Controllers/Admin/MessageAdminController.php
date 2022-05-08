@@ -10,7 +10,7 @@ class MessageAdminController extends Controller
 {
     public function index()
     {
-        $data['messages'] = Message::select ('id','name','email','subject')->orderBy('id','DESC')->get();
+        $data['messages'] = Message::select ('id','name','email','subject','message')->orderBy('id','DESC')->get();
         return view('admin.messages.index')->with($data);
     }
 
@@ -23,7 +23,7 @@ class MessageAdminController extends Controller
     public function showMessage($id)
     {
         $data['message'] = Message::findOrFail($id)->first();
-        return view('admin.messages.index')->with($data);
+        return view('admin.messages.showMessage')->with($data);
 
     }
 

@@ -8,5 +8,20 @@
 
 </div>
 
-
+ <div>
+    {{$message->name}}
+ </div>
+ <div>
+    {{$message->email}}
+ </div>
+ <div>
+    @if ($message->subject !=null)
+    {{ $message->subject }}
+    @else
+    not exist
+    @endif
+ </div>
+ <div>
+    {{$message->message}}
+ </div>
 @endsection
