@@ -29,7 +29,7 @@ use App\Http\Controllers\Admin\CourseAdminController;
         Route::get('/cat/{id}', [CourseController::class, 'cat'])->name('front.cat');
         Route::get('/cat/{id}/course/{c_id}', [CourseController::class, 'show'])->name('front.show');
         Route::get('/contact', [ContactController::class, 'index'])->name('front.contact');
-        Route::post('/message/newsletter', [MessageController::class, 'newsletter'])->name('front.message.newsletter');
+        Route::post('/Admin/newsletter', [MessageController::class, 'newsletter'])->name('front.message.newsletter');
         Route::post('/message/contact', [MessageController::class, 'contact'])->name('front.message.contact');
         Route::post('/message/enroll', [MessageController::class, 'enroll'])->name('front.message.enroll');
     });
@@ -88,6 +88,11 @@ use App\Http\Controllers\Admin\CourseAdminController;
             Route::get('/students/{id}/courses/{c_id}/reject', [StudentController::class, 'rejectCourse'])->name('admin.students.rejectCourse');
             Route::get('/students/{id}/courses/{c_id}/delete', [StudentController::class, 'deleteCourse'])->name('admin.students.deleteCourse');
 
+            //messages
+            Route::get('/messages', [MessageAdminController::class, 'index'])->name('admin.messages.index');
+            Route::get('/messages/edit/{id}', [MessageAdminController::class, 'edit'])->name('admin.messages.edit');
+            Route::post('/messages/update', [MessageAdminController::class, 'update'])->name('admin.messages.update');
+            Route::get('/messages/delete/{id}', [MessageAdminController::class, 'delete'])->name('admin.messages.delete');
 
         });
 
