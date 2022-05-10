@@ -35,10 +35,12 @@
                     <div class="single_special_cource">
                         <img src="{{ asset('uploads/courses/'. $c->img) }}" class="special_img" alt="">
                         <div class="special_cource_text">
-                            <a href="{{ route('front.cat',$c->cat->id) }}" style="width: 80%; text-align: center;" class="btn_4">{{$c->cat->name}}</a>
-                            <h4>${{$c->price}}</h4>
-                            <a href="{{ route('front.show',[$c->cat->id,$c->id]) }}"><h3>{{$c->name}}</h3></a>
-                            <p style="height:60px">{{$c->small_desc}}</p>
+                            {{-- <a href="{{ route('front.cat',$c->cat->id) }}" style="width: 80%; text-align: center;" class="btn_4">{{$c->cat->name}}</a> --}}
+                            <div class="d-flex p-0" >
+                            <a style="margin-right:2px" href="{{ route('front.show',[$c->cat->id,$c->id]) }}"><h4  style="height:80px;" >{{$c->name}}</h4></a>
+                            <h2   style="height: 60px; line-height:60px;">${{$c->price}}</h2>
+                           </div>
+                            <p style="height:90px">{{$c->small_desc}}</p>
                             <div class="author_info">
                                 <div class="author_img">
                                     <img src="{{ asset('uploads/trainers/'. $c->trainer->img) }}"/>
