@@ -1,20 +1,23 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
 //controller for admin
 use App\Http\Controllers\Admin\CatController;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\HomeController;
-use App\Http\Controllers\front\CourseController;
+use App\Http\Controllers\Admin\CourseAdminController;
+use App\Http\Controllers\Admin\MessageAdminController;
 use App\Http\Controllers\Admin\SettingController;
-//controller for front
 use App\Http\Controllers\Admin\StudentController;
 use App\Http\Controllers\Admin\TrainerController;
+
+//controller for front
 use App\Http\Controllers\Front\ContactController;
 use App\Http\Controllers\front\MessageController;
 use App\Http\Controllers\Front\HomepageController;
-use App\Http\Controllers\Admin\CourseAdminController;
-use App\Http\Controllers\Admin\MessageAdminController;
+use App\Http\Controllers\front\CourseController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
