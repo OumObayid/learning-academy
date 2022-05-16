@@ -952,8 +952,8 @@ ul {
 
 /* line 263, E:/172 Etrain Education/172_Etrain_Education_html/sass/_blog.scss */
 .causes_slider .owl-dots .owl-dot {
-  height: 14px;
-  width: 14px;
+  height: 18px;
+  width: 18px;
   background: #eeeeee;
   display: inline-block;
   margin-right: 7px;
@@ -2729,13 +2729,13 @@ ul {
 /* line 164, E:/172 Etrain Education/172_Etrain_Education_html/sass/_banner.scss */
 .banner_part:after {
   position: absolute;
-  top: 163px;
-  width: 41%;
-  height: 55%;
+  top: 100px;
+  width: 61%;
+  height: 75%;
   content: "";
   background-image: url(../img/banner_img.png);
   background-size: 100% 100%;
-  right: 9%;
+  right: 0%;
 }
 
 @media (max-width: 576px) {
@@ -4009,7 +4009,7 @@ ul {
 
 /* line 42, E:/172 Etrain Education/172_Etrain_Education_html/sass/_special_cource.scss */
 .special_cource .single_special_cource .special_cource_text {
-  padding: 35px 35px 40px;
+    padding: 20px 8px 8px;
   border: 1px solid #edeff2;
   border-top: 0px;
 }
@@ -4017,22 +4017,21 @@ ul {
 @media (max-width: 576px) {
   /* line 42, E:/172 Etrain Education/172_Etrain_Education_html/sass/_special_cource.scss */
   .special_cource .single_special_cource .special_cource_text {
-    padding: 20px 15px 15px;
+    padding: 20px 8px 8px;
   }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   /* line 42, E:/172 Etrain Education/172_Etrain_Education_html/sass/_special_cource.scss */
   .special_cource .single_special_cource .special_cource_text {
-    padding: 20px 15px 15px;
+    padding: 20px 8px 8px;
   }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   /* line 42, E:/172 Etrain Education/172_Etrain_Education_html/sass/_special_cource.scss */
   .special_cource .single_special_cource .special_cource_text {
-    padding: 20px 15px 15px;
-  }
+    padding: 20px 8px 8px;  }
 }
 
 /* line 61, E:/172 Etrain Education/172_Etrain_Education_html/sass/_special_cource.scss */
@@ -4598,6 +4597,8 @@ ul {
 
 /* line 103, E:/172 Etrain Education/172_Etrain_Education_html/sass/_testimonial_part.scss */
 .testimonial_part .owl-dots {
+  display: flex !important;
+  justify-content: center !important;
   text-align: center;
   padding-top: 67px;
   margin-left: -26%;

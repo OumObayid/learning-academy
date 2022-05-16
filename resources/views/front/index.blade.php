@@ -7,11 +7,10 @@
                 <div class="col-lg-6 col-xl-6">
                     <div class="banner_text">
                         <div class="banner_text_iner">
-                            <h5>{{ json_decode($banner->content)->title }}</h5>
-                            <h1>{{ json_decode($banner->content)->subtitle }}</h1>
-                            <p>{{ json_decode($banner->content)->desc }}</p>
-                            <a href="#" class="btn_1">View Course </a>
-                            <a href="#" class="btn_2">Get Started </a>
+                            <h5>{{ $siteContent->title }}</h5>
+                            <h1>{{ $siteContent->subtitle }}</h1>
+                            <p>{{ $siteContent->desc }}</p>
+                            <a href="#" class="btn_1">View Courses </a>
                         </div>
                     </div>
                 </div>
@@ -67,7 +66,8 @@
     <!-- upcoming_event part start-->
 
     <!-- member_counter counter start -->
-    <section class="member_counter">
+
+    <section class="member_counter mt-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-sm-6">
@@ -108,12 +108,12 @@
             <div class="row">
                 @foreach ($courses as $c)
                     <div class="col-sm-6 col-lg-4">
-                        <div class="single_special_cource">
+                        <div class="single_special_cource mb-5">
                             <img src="{{ asset('uploads/courses/'. $c->img) }}" class="special_img"  alt="img">
                             <div class="special_cource_text">
                                 <a href="{{ route('front.cat', $c->cat->id) }}" style="width: 80%; text-align: center;" class="btn_4">{{$c->cat->name}}</a>
                                 <h4>${{$c->price}}</h4>
-                                <a href="{{ route('front.show', [$c->cat->id,$c->id]) }}"><h3>{{$c->name}}</h3></a>
+                                <a   href="{{ route('front.show', [$c->cat->id,$c->id]) }}"><h3 style="height:60px">{{$c->name}}</h3></a>
                                 <p style="height:60px">{{$c->small_desc}}</p>
                                 <div class="author_info">
                                     <div class="author_img">
@@ -138,7 +138,7 @@
 
 
     <!--::testimonial_part start::-->
-    <section class="testimonial_part mt-5">
+    <section class="testimonial_part mt-5 pb-5">
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-xl-5">

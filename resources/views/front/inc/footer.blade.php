@@ -5,10 +5,8 @@
             <div class="row justify-content-between">
                 <div class="col-sm-6 col-md-4 col-xl-3">
                     <div class="single-footer-widget footer_1">
-                        <a  href="{{ route('front.homepage') }}"> <img src="{{ asset('uploads/setting/'.$sett->logo) }}" alt="logo"> </a>
-                        <p>But when shot real her. Chamber her one visite removal six
-                            sending himself boys scot exquisite existend an </p>
-                        <p>But when shot real her hamber her </p>
+                        <a  href="{{ route('front.homepage') }}" > <img src="{{ asset('uploads/setting/'.$sett->logo) }}" alt="logo"> </a>
+                        <p>IT Learning, The higher education Campus integrated since 2005 within the FST – Settat and dedicated to training and certification in the fields of new technologies and information systems. </p>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-4 col-xl-4">
@@ -34,7 +32,7 @@
                             <a href="{{ $sett->fb }}"> <i class="ti-facebook"></i> </a>
                             <a href="{{ $sett->twiter }}"> <i class="ti-twitter-alt"></i> </a>
                             <a href="{{ $sett->insta }}"> <i class="ti-instagram"></i> </a>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -58,7 +56,7 @@
                         <div class="row">
                             <div class="col-lg-12">
                                 <p class="footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Edited <i class="ti-heart" aria-hidden="true"></i> by <a href="{{ $sett->site }}" target="_blank">Learning Academy</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Edited <i class="ti-heart" aria-hidden="true"></i> by <a href="{{ $sett->site }}" target="_blank">OUMAIMA EL OBAYID</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                             </div>
                         </div>

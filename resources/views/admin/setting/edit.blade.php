@@ -26,6 +26,17 @@
                 </td>
             </tr>
             <tr>
+                <td> <tr>
+                <td>Background</td>
+                <td><img src="{{ asset('uploads/setting/' . $setting->background) }}" width="250"
+                        class="my-3" /><input name="favicon" class="form-control-file" type="file">
+                </td>
+            </tr></td>
+                <td><img src="{{ asset('uploads/setting/' . $setting->favicon) }}" width="50"
+                        class="my-3" /><input name="favicon" class="form-control-file" type="file">
+                </td>
+            </tr>
+            <tr>
                 <td>City</td>
                 <td><input name="city" class="form-control" type="text" value="{{ $setting->city }}"></td>
             </tr>

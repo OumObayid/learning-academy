@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class SiteContent extends Model
 {
+    protected $fillable = ['name','title','subtitle','desc'];
+
     use HasFactory;
 }

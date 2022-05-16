@@ -21,6 +21,12 @@
             </td>
         </tr>
         <tr>
+            <td>Background</td>
+            <td>
+                <img src="{{ asset('uploads/setting/' . $setting->background) }}" width="250" />
+            </td>
+        </tr>
+        <tr>
             <td>City</td>
             <td>{{ $setting->city }}</td>
         </tr>

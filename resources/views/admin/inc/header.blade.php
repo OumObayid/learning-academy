@@ -40,8 +40,12 @@
                 </ul>
                 <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
                     <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="{{ route('admin.siteContent.index') }}">Site content</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="{{ route('admin.setting.index') }}">Setting</a>
-                    </li><li class="nav-item">
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="{{ route('admin.logout') }}">Logout</a>
                     </li>
                 </ul>

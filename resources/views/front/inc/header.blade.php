@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Etrain</title>
+    <title>IT LEARNING</title>
     <link rel="icon" href="{{ asset('uploads/setting/'.$sett->favicon) }}">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('front/css') }}/bootstrap.min.css">
@@ -29,7 +29,7 @@
 
 <body>
     <!--::header part start::-->
-    <header class="main_menu 
+    <header class="main_menu
     @if (Route::currentRouteName() == 'front.homepage')
          home_menu
     @else
@@ -39,7 +39,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg navbar-light">
-                        <a class="navbar-brand" href="{{ route('front.homepage') }}"> <img src="{{ asset('uploads/setting/'.$sett->logo) }}" alt="logo"> </a>
+                        <a class="navbar-brand" style="width: 185px;" href="{{ route('front.homepage') }}"> <img src="{{ asset('uploads/setting/'.$sett->logo) }}" alt="logo"> </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -51,17 +51,17 @@
                             <ul class="navbar-nav align-items-center">
                                 <li class="nav-item ">
                                     <a class="nav-link" href="{{ route('front.homepage') }}">Home</a>
-                                </li> 
+                                </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         Courses
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                       
+
                                         @foreach ($cats as $cat )
                                             <a class="dropdown-item" href="{{ route('front.cat', $cat->id) }}">{{ $cat->name }}</a>
                                         @endforeach
-                                       
+
 
 
                                     </div>

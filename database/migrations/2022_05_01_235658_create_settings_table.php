@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('logo');
             $table->string('favicon');
+            $table->string('background');
             $table->string('city');
             $table->string('adresse');
             $table->string('phone');

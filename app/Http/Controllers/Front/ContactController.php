@@ -10,8 +10,10 @@ class ContactController extends Controller
 {
     public function index()
     {
-        $data['contact'] = Setting:: select('name', 'city','adresse', 'phone', 'work_hours', 'email','fb','twiter', 'insta')
-        ->first(); 
+        // $data['settings'] = Setting:: select('name', 'city','adresse', 'phone', 'work_hours', 'email','fb','twiter', 'insta')
+        // ->first();
+        // return view('front.contact.index')->with($data);
+        $data['settings'] = Setting::first();
         return view('front.contact.index')->with($data);
 
     }

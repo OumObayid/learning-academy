@@ -29,6 +29,7 @@ class SettingController extends Controller
            'name' => 'required|max:255',
            'logo' => 'nullable|image|mimes:jpg,jpeg,png',
            'favicon' => 'nullable|image|mimes:jpg,jpeg,png',
+           'background' => 'nullable|image|mimes:jpg,jpeg,png',
            'city' => 'required|max:255',
            'adresse' => 'required|max:255',
            'phone' => 'required|max:255',
@@ -73,6 +74,25 @@ class SettingController extends Controller
         $data['favicon']=$favicon_name;
         }
         else $data['favicon']= $favicon_name;
+
+        //storage du background
+        $background_name = Setting::findOrFail($request->id)->background;
+        if ($request->hasFile('background'))
+        {
+        //supprimer l'ancien image
+        Storage::disk('uploads')->delete('setting/'. $background_name);
+        // ajouter la nouvelle image
+        $image = $request->file('background');
+        $background_name = 'background.png';
+        $destinationPath = public_path('/uploads/setting');
+
+        $img = Image::make($image->path());
+        $img->save($destinationPath.'/'.$background_name);
+        $data['background']=$background_name;
+        }
+        else $data['background']= $background_name;
+
+
 
        Setting::findOrFail($request->id)->update($data);
        return back();
