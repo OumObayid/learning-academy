@@ -14,6 +14,18 @@
                 <td><input name="name" class="form-control" type="text" value="{{ $setting->name }}" /></td>
             </tr>
             <tr>
+                <td>Title</td>
+                <td><input name="title" class="form-control" type="text" value="{{ $setting->title }}" /></td>
+            </tr>
+            <tr>
+                <td>Subtitle</td>
+                <td><input name="subtitle" class="form-control" type="text" value="{{ $setting->subtitle }}" /></td>
+            </tr>
+            <tr>
+                <td>Description</td>
+                <td> <textarea name="desc" class="form-control" cols="30" rows="5">{{ $setting->desc }}</textarea></td>
+            </tr>
+            <tr>
                 <td>Logo</td>
                 <td><img src="{{ asset('uploads/setting/' . $setting->logo) }}" width="200" class="my-3" /><input name="logo"
                         class="form-control-file" type="file">

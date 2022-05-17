@@ -14,11 +14,13 @@ class ViewServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        //envoyer les données de Cat et Setting au fichier header
         view()->composer('front.inc.header', function($view) {
             $view->with('cats',Cat::select('id','name')->get());
             $view->with('sett',Setting::select('logo','favicon')->first());
         });
-        
+
+        //envoyer les données de Setting au fichier footer
         view()->composer('front.inc.footer', function($view) {
             $view->with('sett',Setting::first());
         });

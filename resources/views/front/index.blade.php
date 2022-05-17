@@ -7,9 +7,9 @@
                 <div class="col-lg-6 col-xl-6">
                     <div class="banner_text">
                         <div class="banner_text_iner">
-                            <h5>{{ $siteContent->title }}</h5>
-                            <h1>{{ $siteContent->subtitle }}</h1>
-                            <p>{{ $siteContent->desc }}</p>
+                            <h5>{{ $setting->title }}</h5>
+                            <h1>{{ $setting->subtitle }}</h1>
+                            <p>{{ $setting->desc }}</p>
                             <a href="#" class="btn_1">View Courses </a>
                         </div>
                     </div>

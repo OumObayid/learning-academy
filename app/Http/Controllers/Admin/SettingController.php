@@ -27,6 +27,9 @@ class SettingController extends Controller
     {
        $data = $request -> validate([
            'name' => 'required|max:255',
+           'title' => 'nullable|max:255',
+           'subtitle' => 'nullable|max:255',
+           'desc' => 'nullable',
            'logo' => 'nullable|image|mimes:jpg,jpeg,png',
            'favicon' => 'nullable|image|mimes:jpg,jpeg,png',
            'background' => 'nullable|image|mimes:jpg,jpeg,png',

@@ -3,9 +3,9 @@
 namespace App\Http\Controllers\Front;
 use App\Models\Test;
 use App\Models\Course;
+use App\Models\Setting;
 use App\Models\Student;
 use App\Models\Trainer;
-use App\Models\SiteContent;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -13,7 +13,7 @@ class HomepageController extends Controller
 {
     public function index()
     {
-        $data['siteContent'] = SiteContent::all()->first();
+        $data['setting'] = Setting::all()->first();
         $data['courses'] = Course:: select('id', 'name', 'small_desc', 'cat_id', 'trainer_id', 'img', 'price')
         ->orderBy('id', 'desc')
         ->take('6')

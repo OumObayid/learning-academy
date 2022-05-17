@@ -16,6 +16,9 @@ return new class extends Migration
         Schema::create('settings', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('title');
+            $table->string('subtitle');
+            $table->string('desc');
             $table->string('logo');
             $table->string('favicon');
             $table->string('background');

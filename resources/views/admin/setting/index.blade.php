@@ -11,6 +11,18 @@
             <td>{{ $setting->name }}</td>
         </tr>
         <tr>
+            <td>Title</td>
+            <td>{{ $setting->title }}</td>
+        </tr>
+        <tr>
+            <td>Subtitle</td>
+            <td>{{ $setting->subtitle }}</td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td>{{ $setting->desc }}</td>
+        </tr>
+        <tr>
             <td>Logo</td>
             <td><img src="{{ asset('uploads/setting/' . $setting->logo) }}" width="200" />
             </td>
