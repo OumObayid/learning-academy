@@ -12,6 +12,7 @@ class Cat extends Model
 
     public function courses()
     {
+        //Creation de la relation 1-many: Cat-Coyrse
         return $this->hasMany('App\Course');
     }
 }
