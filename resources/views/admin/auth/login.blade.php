@@ -37,28 +37,11 @@
 </head>
 
 <body>
-    {{-- <div class="container m-5 p-5">
-        @include('admin.inc.errors')
-        <form method="POST" action="{{ route('admin.doLogin')  }}">
-            @csrf
-            <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" required name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" required name="password" class="form-control" id="exampleInputPassword1">
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
-    </div> --}}
-
-    {{-- login 2 --}}
-
+   
     <div class="limiter">
 		<div class="container-login100" style="background-image: url('https://www.itlearning-campus.com/wp-content/uploads/2021/05/main_slide.jpeg');">
 			<div class="wrap-login100 p-t-30 p-b-50">
-				
+
 				 @include('admin.inc.errors')
                     <form class="login100-form validate-form p-b-33 p-t-5 " method="POST" action="{{ route('admin.doLogin')  }}">
                         @csrf
