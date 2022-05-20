@@ -19,6 +19,9 @@ class ViewServiceProvider extends ServiceProvider
             $view->with('cats',Cat::select('id','name')->get());
             $view->with('sett',Setting::select('title','logo','favicon')->first());
         });
+        view()->composer('admin.inc.header', function($view) {
+            $view->with('sett',Setting::select('favicon')->first());
+        });
 
         //envoyer les données de Setting au fichier footer
         view()->composer('front.inc.footer', function($view) {
