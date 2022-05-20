@@ -10,7 +10,7 @@ class Admin extends Authenticatable
 {
     use  Notifiable;
     // protected $guard = 'admin';
-
+    // Seuls ces champs compte pour une tel operation crud
     protected $fillable = [
         'username',
         'email',
