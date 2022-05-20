@@ -112,7 +112,7 @@
                             <div class="special_cource_text">
                                 <a href="{{ route('front.cat', $c->cat->id) }}" style="width: 80%; text-align: center;" class="btn_4">{{$c->cat->name}}</a>
                                 <h4>${{$c->price}}</h4>
-                                <a   href="{{ route('front.show', [$c->cat->id,$c->id]) }}"><h3 style="height:60px">{{$c->name}}</h3></a>
+                                <a   href="{{ route('front.show',$c->id) }}"><h3 style="height:60px">{{$c->name}}</h3></a>
                                 <p style="height:60px">{{$c->small_desc}}</p>
                                 <div class="author_info">
                                     <div class="author_img">
@@ -133,7 +133,6 @@
         </div>
     </section>
     <!--::review_part end::-->
-
 
 
     <!--::testimonial_part start::-->

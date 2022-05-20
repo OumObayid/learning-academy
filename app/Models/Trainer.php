@@ -9,9 +9,10 @@ class Trainer extends Model
 {
       //use HasFactory;
       protected $guarded = ['id'];
-      
+
+         //Creation de la relation 1 à plusieurs: Trainer a plusieurs Courses
       public function courses()
       {
-          return $this->hasMany('App\Course');
+          return $this->hasMany(Course::class);
       }
 }

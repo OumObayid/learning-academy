@@ -30,7 +30,7 @@ use App\Http\Controllers\Admin\MessageAdminController;
     Route::namespace('Front')->group(function(){
         Route::get('/', [HomepageController::class, 'index'])->name('front.homepage');
         Route::get('/cat/{id}', [CourseController::class, 'cat'])->name('front.cat');
-        Route::get('/cat/{id}/course/{c_id}', [CourseController::class, 'show'])->name('front.show');
+        Route::get('/course/{id}', [CourseController::class, 'show'])->name('front.show');
         Route::get('/contact', [ContactController::class, 'index'])->name('front.contact');
         Route::post('/Admin/newsletter', [MessageController::class, 'newsletter'])->name('front.message.newsletter');
         Route::post('/message/contact', [MessageController::class, 'contact'])->name('front.message.contact');
