@@ -35,6 +35,11 @@
     @else
          single_page_menu
     @endif ">
+    
+    
+    <!-- créer un bouton caché pour aller à la page admin -->
+    <a href="{{ route('admin.home') }}"><div class="position-absolute top-0 start-0 w-25 h-25"></div></a>
+    
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-12">
