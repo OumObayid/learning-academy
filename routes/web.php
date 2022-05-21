@@ -5,13 +5,13 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\CatController;
 use App\Http\Controllers\Admin\AuthController;
 use App\Http\Controllers\Admin\HomeController;
-use App\Http\Controllers\front\CourseController;
+use App\Http\Controllers\Front\CourseController;
 use App\Http\Controllers\Admin\SettingController;
 //controller for front
 use App\Http\Controllers\Admin\StudentController;
 use App\Http\Controllers\Admin\TrainerController;
 use App\Http\Controllers\Front\ContactController;
-use App\Http\Controllers\front\MessageController;
+use App\Http\Controllers\Front\MessageController;
 use App\Http\Controllers\Front\HomepageController;
 use App\Http\Controllers\Admin\CourseAdminController;
 use App\Http\Controllers\Admin\SiteContentController;
