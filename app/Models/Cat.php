@@ -7,11 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Cat extends Model
 {
-    
-    protected $guarded = ['id'];
 
+    protected $guarded = ['id'];
+   //Creation de la relation 1 à plusieurs: Cat a plusieurs Courses
     public function courses()
     {
-        return $this->hasMany('App\Course');
+        return $this->hasMany(Course::class);
     }
 }

@@ -32,7 +32,7 @@
 <div class="container">
   <div class="row ">
       <div class="col-12 text-center">
-          {!! $settings->map !!}
+          {!! $setting->map !!}
       </div>
   </div>
 
@@ -77,21 +77,21 @@
       <div class="media contact-info">
         <span class="contact-info__icon"><i class="ti-home"></i></span>
         <div class="media-body">
-          <h3>{{$settings->city}}</h3>
-          <p>{{$settings->address}}</p>
+          <h3>{{$setting->city}}</h3>
+          <p>{{$setting->address}}</p>
         </div>
       </div>
       <div class="media contact-info">
         <span class="contact-info__icon"><i class="ti-tablet"></i></span>
         <div class="media-body">
-          <h3>{{$settings->phone}}</h3>
-          <p>{{$settings->work_hours}}</p>
+          <h3>{{$setting->phone}}</h3>
+          <p>{{$setting->work_hours}}</p>
         </div>
       </div>
       <div class="media contact-info">
         <span class="contact-info__icon"><i class="ti-email"></i></span>
         <div class="media-body">
-          <h3>{{$settings->email}}</h3>
+          <h3>{{$setting->email}}</h3>
           <p>Send us your query anytime!</p>
         </div>
       </div>

@@ -38,7 +38,7 @@
 
                             {{-- <a href="{{ route('front.cat',$c->cat->id) }}" style="width: 80%; text-align: center;" class="btn_4">{{$c->cat->name}}</a> --}}
                             <div style="height: 100px;" class="d-flex justify-content-between align-items-center">
-                                <a style="width: 80%;" href="{{ route('front.show',[$c->cat->id,$c->id]) }}"><h3>{{$c->name}}</h3></a>
+                                <a style="width: 80%;" href="{{ route('front.show',$c->id) }}"><h3>{{$c->name}}</h3></a>
                                 <h4 style="font-size: 28px">${{$c->price}}</h4>
                             </div>
 

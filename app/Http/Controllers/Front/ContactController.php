@@ -13,7 +13,7 @@ class ContactController extends Controller
         // $data['settings'] = Setting:: select('name', 'city','adresse', 'phone', 'work_hours', 'email','fb','twiter', 'insta')
         // ->first();
         // return view('front.contact.index')->with($data);
-        $data['settings'] = Setting::first();
+        $data['setting'] = Setting::first();
         return view('front.contact.index')->with($data);
 
     }

@@ -12,8 +12,10 @@ class Student extends Model
       //use HasFactory;
       use HasFactory;
 
+ //Creation de la relation 'plusieur à plusieur': 'belongsToMany' : Student appartient à plusieurs courses
       public function courses()
       {
-          return $this->belongsToMany('App\Models\Course')->withPivot('status');
+          //on doit spécifier l'attribut supplémentaire ('statut') de la table intermédiaire ('course_student) avec la fonction withPivot()
+          return $this->belongsToMany(Course::class)->withPivot('status');
       }
 }
