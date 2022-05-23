@@ -40,7 +40,7 @@
             <tr>               
                 <td>Background</td>
                 <td><img src="{{ asset('uploads/setting/' . $setting->background) }}" width="250"
-                        class="my-3" /><input name="favicon" class="form-control-file" type="file">
+                        class="my-3" /><input name="background" class="form-control-file" type="file">
                 </td>
             </tr>           
             <tr>
