@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class NewsLetter extends Model
 { 
+        // Seuls ces champs compte pour une tel operation crud
     protected $fillable = ['email'];
 
     use HasFactory;

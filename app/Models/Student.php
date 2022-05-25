@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Student extends Model
 {
+    // Seuls ces champs compte pour une tel operation crud
     protected $fillable = ['name','email','spec'];
 
       //use HasFactory;
