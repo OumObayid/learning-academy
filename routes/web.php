@@ -94,7 +94,7 @@ use App\Http\Controllers\Admin\MessageAdminController;
             Route::get('/setting', [SettingController::class, 'index'])->name('admin.setting.index');
             Route::get('/setting/edit', [SettingController::class, 'edit'])->name('admin.setting.edit');
             Route::post('/setting/update', [SettingController::class, 'update'])->name('admin.setting.update');
-            //site content
+            //Newsletter
             Route::get('/newsletter', [NewsletterController::class, 'index'])->name('admin.newsletters.index');
             Route::get('/newsletter/create', [NewsletterController::class, 'create'])->name('admin.newsletters.create');
             Route::post('/newsletter/send', [NewsletterController::class, 'send'])->name('admin.newsletters.send');
