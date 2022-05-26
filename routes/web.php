@@ -102,6 +102,4 @@ use App\Http\Controllers\Admin\MessageAdminController;
         });
 
     });
-    // Route::get('/dashboard', function () {
-    //     return view('dashboard');
-    // })->middleware(['auth'])->name('dashboard');
+    
