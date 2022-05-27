@@ -14,7 +14,7 @@ use App\Http\Controllers\Front\ContactController;
 use App\Http\Controllers\Front\MessageController;
 use App\Http\Controllers\Front\HomepageController;
 use App\Http\Controllers\Admin\CourseAdminController;
-use App\Http\Controllers\Admin\SiteContentController;
+use App\Http\Controllers\Admin\NewsletterController;
 use App\Http\Controllers\Admin\MessageAdminController;
 /*
 |--------------------------------------------------------------------------
@@ -95,9 +95,10 @@ use App\Http\Controllers\Admin\MessageAdminController;
             Route::get('/setting/edit', [SettingController::class, 'edit'])->name('admin.setting.edit');
             Route::post('/setting/update', [SettingController::class, 'update'])->name('admin.setting.update');
             //site content
-            Route::get('/siteContent', [SiteContentController::class, 'index'])->name('admin.siteContent.index');
-            Route::get('/siteContent/edit', [SiteContentController::class, 'edit'])->name('admin.siteContent.edit');
-            Route::post('/siteContent/update', [SiteContentController::class, 'update'])->name('admin.siteContent.update');
+            Route::get('/newsletter', [NewsletterController::class, 'index'])->name('admin.newsletters.index');
+            Route::get('/newsletter/create', [NewsletterController::class, 'create'])->name('admin.newsletters.create');
+            Route::post('/newsletter/send', [NewsletterController::class, 'send'])->name('admin.newsletters.send');
+            Route::get('/newsletter/delete/{id}', [NewsletterController::class, 'delete'])->name('admin.newsletters.delete');
         });
 
     });
