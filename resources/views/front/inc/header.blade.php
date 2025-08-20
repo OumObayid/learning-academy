@@ -30,7 +30,7 @@
 
 <body>
     <!--::header part start::-->
-    <header class="main_menu
+    <header class="main_menu 
     @if (Route::currentRouteName() == 'front.homepage')
          home_menu
     @else

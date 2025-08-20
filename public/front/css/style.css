@@ -11,7 +11,10 @@
   background-image: -webkit-linear-gradient(0deg, #ee390f 0%, #f9b700 100%);
   background-image: -ms-linear-gradient(0deg, #ee390f 0%, #f9b700 100%);
 }
-
+/* line 10, E:/172 Etrain Education/172_Etrain_Education_html/sass/_extends.scss */
+html {
+    scroll-behavior: smooth;
+}
 /**************** extend css start ****************/
 /**************** common css start ****************/
 /* line 3, E:/172 Etrain Education/172_Etrain_Education_html/sass/_common.scss */
@@ -7288,3 +7291,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*# sourceMappingURL=style.css.map */
+#scrollTopBtn {
+    display: none; /* caché par défaut */
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 99;
+    cursor: pointer;
+}
+
+#scrollTopBtn img {
+    width: 50px; /* taille de l'image */
+    height: 50px;
+}

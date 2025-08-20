@@ -9,7 +9,7 @@
                         <div class="banner_text_iner">
                             <h1>{{ $setting->subtitle }}</h1>
                             <p>{{ $setting->desc }}</p>
-                            <a href="#" class="btn_1">View Courses </a>
+                            <a href="#courses" class="btn_1">View Courses </a>
                         </div>
                     </div>
                 </div>
@@ -94,7 +94,7 @@
     <!-- member_counter counter end -->
 
     <!--::review_part start::-->
-    <section class="special_cource padding_top">
+    <section id="courses" class="special_cource padding_top">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-xl-5">
