@@ -1,26 +1,16 @@
-# 🎓 Learning Academy
-
 ![Laravel](https://img.shields.io/badge/Laravel-9.10.1-red)
 ![PHP](https://img.shields.io/badge/PHP-8.1-blue)
 ![MySQL](https://img.shields.io/badge/MySQL-8.0-green)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-4.6-purple)
 
-> Une plateforme de cours en ligne permettant aux étudiants d’acheter des formations dispensées par des formateurs experts.
+# 🎓 Learning Academy
+
+Un site web de formation en ligne développé avec Laravel, offrant aux utilisateurs la possibilité de découvrir et d’acheter des cours dispensés par des formateurs qualifiés. La plateforme propose une interface intuitive et responsive, un accès facile aux informations sur les cours et les formateurs, ainsi qu’un processus d’achat sécurisé.
 
 ---
 
-## 🌟 Aperçu du projet
-
-Learning Academy est un **site e-learning** développé avec **Laravel**, **PHP**, **MySQL**, **HTML5**, **CSS3**, **Bootstrap 4** et **JavaScript**.  
-Il permet :
-
-- Navigation fluide entre les sections
-- Consultation des cours en ligne
-- Achat de cours via le site
-- Gestion des étudiants et formateurs via un panneau d'administration
-- Design responsive pour desktop, tablettes et mobiles
-
----
+📸 Aperçu
+<img width="320" height="180" alt="learning" src="https://github.com/user-attachments/assets/5c2d212b-057a-4655-884e-5933244c5079" />
 
 ## 🚀 Démo
 👉 [Lien vers le site](https://learning.oumportfolio.com/)
