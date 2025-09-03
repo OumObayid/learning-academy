@@ -1,32 +1,27 @@
-* text=auto
-
-*.blade.php diff=html
-*.css diff=css
-*.html diff=html
-*.md diff=markdown
-*.php diff=php
-
-/.github export-ignore
-CHANGELOG.md export-ignore
-
-# --- Normalisation des fins de lignes ---
-* text=auto
-
-# --- Gestion des diffs ---
-*.blade.php diff=html
-*.css diff=css
-*.html diff=html
-*.md diff=markdown
-*.php diff=php
-
-# --- Correction détection de langage GitHub (Linguist) ---
+# --- Forcer Blade comme PHP ---
 *.blade.php linguist-language=PHP
 
-# Ignorer les fichiers générés ou vendored
-/public/* linguist-vendored
-/node_modules/* linguist-vendored
-/vendor/* linguist-vendored
+# --- Compter tout le code PHP correctement ---
+*.php linguist-language=PHP
 
-# --- Ignorer certains fichiers lors d'un export ---
-/.github export-ignore
-CHANGELOG.md export-ignore
+# --- Ignorer le code généré ou compilé ---
+/public/* linguist-vendored
+/vendor/* linguist-vendored
+/node_modules/* linguist-vendored
+/storage/* linguist-vendored
+
+# --- Ignorer CSS/JS pour éviter qu’ils dominent le calcul ---
+*.css linguist-vendored
+*.scss linguist-vendored
+*.sass linguist-vendored
+*.less linguist-vendored
+*.js linguist-vendored
+*.map linguist-vendored
+
+# --- Documentation ignorée ---
+*.md linguist-documentation
+CHANGELOG.md linguist-documentation
+/.github/* linguist-vendored
+
+# --- Force auto-normalisation des fins de lignes ---
+* text=auto
