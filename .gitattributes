@@ -8,3 +8,25 @@
 
 /.github export-ignore
 CHANGELOG.md export-ignore
+
+# --- Normalisation des fins de lignes ---
+* text=auto
+
+# --- Gestion des diffs ---
+*.blade.php diff=html
+*.css diff=css
+*.html diff=html
+*.md diff=markdown
+*.php diff=php
+
+# --- Correction détection de langage GitHub (Linguist) ---
+*.blade.php linguist-language=PHP
+
+# Ignorer les fichiers générés ou vendored
+/public/* linguist-vendored
+/node_modules/* linguist-vendored
+/vendor/* linguist-vendored
+
+# --- Ignorer certains fichiers lors d'un export ---
+/.github export-ignore
+CHANGELOG.md export-ignore
